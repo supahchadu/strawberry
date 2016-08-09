@@ -7,21 +7,73 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		50946DC8C900321956A3F61D /* Pods_notefy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3478321058A3BE69238ABB9C /* Pods_notefy.framework */; };
+		9A07DDF61D58F67300360A0E /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A07DDF51D58F67300360A0E /* SignInVC.swift */; };
+		9A07DDF81D59065700360A0E /* DesignView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A07DDF71D59065700360A0E /* DesignView.swift */; };
+		9A07DDFB1D5906F900360A0E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A07DDFA1D5906F900360A0E /* Constants.swift */; };
+		9A07DDFD1D5909AE00360A0E /* FacebookButtonDesignView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A07DDFC1D5909AE00360A0E /* FacebookButtonDesignView.swift */; };
+		9A07DDFF1D590B4500360A0E /* PasswordDesignView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A07DDFE1D590B4500360A0E /* PasswordDesignView.swift */; };
+		9A07DE011D590DA700360A0E /* SignInDesignViewBTN.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A07DE001D590DA700360A0E /* SignInDesignViewBTN.swift */; };
+		9A07DE041D593E4B00360A0E /* NoteFeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A07DE031D593E4A00360A0E /* NoteFeed.swift */; };
+		9A07DE061D5953FB00360A0E /* cameraDesignViewSmoothRect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A07DE051D5953FB00360A0E /* cameraDesignViewSmoothRect.swift */; };
+		9A07DE081D5961C200360A0E /* NoteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A07DE071D5961C200360A0E /* NoteCell.swift */; };
+		9A07DE0B1D59706400360A0E /* DatabaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A07DE0A1D59706400360A0E /* DatabaseService.swift */; };
+		9A175B5E1D58811000BE67A0 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A175B5D1D58811000BE67A0 /* MapKit.framework */; };
+		9A3E0B141D585D4B00AC4A66 /* GeoFire.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A3E0B0B1D585D4B00AC4A66 /* GeoFire.m */; };
+		9A3E0B151D585D4B00AC4A66 /* GFBase32Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A3E0B0D1D585D4B00AC4A66 /* GFBase32Utils.m */; };
+		9A3E0B161D585D4B00AC4A66 /* GFGeoHash.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A3E0B0F1D585D4B00AC4A66 /* GFGeoHash.m */; };
+		9A3E0B171D585D4B00AC4A66 /* GFGeoHashQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A3E0B111D585D4B00AC4A66 /* GFGeoHashQuery.m */; };
+		9A3E0B181D585D4B00AC4A66 /* GFQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A3E0B131D585D4B00AC4A66 /* GFQuery.m */; };
+		9A3E0B1D1D5861CA00AC4A66 /* NoteAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3E0B1C1D5861CA00AC4A66 /* NoteAnnotation.swift */; };
 		9A84BD711D582B0F00369027 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A84BD701D582B0F00369027 /* AppDelegate.swift */; };
-		9A84BD731D582B0F00369027 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A84BD721D582B0F00369027 /* ViewController.swift */; };
+		9A84BD731D582B0F00369027 /* MapNotes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A84BD721D582B0F00369027 /* MapNotes.swift */; };
 		9A84BD761D582B0F00369027 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A84BD741D582B0F00369027 /* Main.storyboard */; };
 		9A84BD781D582B0F00369027 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9A84BD771D582B0F00369027 /* Assets.xcassets */; };
 		9A84BD7B1D582B0F00369027 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A84BD791D582B0F00369027 /* LaunchScreen.storyboard */; };
+		9A84BD831D5835B400369027 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9A84BD821D5835B400369027 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3478321058A3BE69238ABB9C /* Pods_notefy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_notefy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7C29F19BA3D415030ACBEF3F /* Pods-notefy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-notefy.debug.xcconfig"; path = "Pods/Target Support Files/Pods-notefy/Pods-notefy.debug.xcconfig"; sourceTree = "<group>"; };
+		9A07DDF51D58F67300360A0E /* SignInVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
+		9A07DDF71D59065700360A0E /* DesignView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignView.swift; sourceTree = "<group>"; };
+		9A07DDFA1D5906F900360A0E /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		9A07DDFC1D5909AE00360A0E /* FacebookButtonDesignView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacebookButtonDesignView.swift; sourceTree = "<group>"; };
+		9A07DDFE1D590B4500360A0E /* PasswordDesignView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasswordDesignView.swift; sourceTree = "<group>"; };
+		9A07DE001D590DA700360A0E /* SignInDesignViewBTN.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInDesignViewBTN.swift; sourceTree = "<group>"; };
+		9A07DE021D591C2300360A0E /* notefy.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = notefy.entitlements; sourceTree = "<group>"; };
+		9A07DE031D593E4A00360A0E /* NoteFeed.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteFeed.swift; sourceTree = "<group>"; };
+		9A07DE051D5953FB00360A0E /* cameraDesignViewSmoothRect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = cameraDesignViewSmoothRect.swift; sourceTree = "<group>"; };
+		9A07DE071D5961C200360A0E /* NoteCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteCell.swift; sourceTree = "<group>"; };
+		9A07DE0A1D59706400360A0E /* DatabaseService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatabaseService.swift; sourceTree = "<group>"; };
+		9A175B5D1D58811000BE67A0 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		9A3E0B041D585D4B00AC4A66 /* GeoFire.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeoFire.h; sourceTree = "<group>"; };
+		9A3E0B051D585D4B00AC4A66 /* GFCircleQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GFCircleQuery.h; sourceTree = "<group>"; };
+		9A3E0B061D585D4B00AC4A66 /* GFQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GFQuery.h; sourceTree = "<group>"; };
+		9A3E0B071D585D4B00AC4A66 /* GFRegionQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GFRegionQuery.h; sourceTree = "<group>"; };
+		9A3E0B081D585D4B00AC4A66 /* GeoFire-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GeoFire-Prefix.pch"; sourceTree = "<group>"; };
+		9A3E0B0A1D585D4B00AC4A66 /* GeoFire+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GeoFire+Private.h"; sourceTree = "<group>"; };
+		9A3E0B0B1D585D4B00AC4A66 /* GeoFire.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeoFire.m; sourceTree = "<group>"; };
+		9A3E0B0C1D585D4B00AC4A66 /* GFBase32Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GFBase32Utils.h; sourceTree = "<group>"; };
+		9A3E0B0D1D585D4B00AC4A66 /* GFBase32Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GFBase32Utils.m; sourceTree = "<group>"; };
+		9A3E0B0E1D585D4B00AC4A66 /* GFGeoHash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GFGeoHash.h; sourceTree = "<group>"; };
+		9A3E0B0F1D585D4B00AC4A66 /* GFGeoHash.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GFGeoHash.m; sourceTree = "<group>"; };
+		9A3E0B101D585D4B00AC4A66 /* GFGeoHashQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GFGeoHashQuery.h; sourceTree = "<group>"; };
+		9A3E0B111D585D4B00AC4A66 /* GFGeoHashQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GFGeoHashQuery.m; sourceTree = "<group>"; };
+		9A3E0B121D585D4B00AC4A66 /* GFQuery+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GFQuery+Private.h"; sourceTree = "<group>"; };
+		9A3E0B131D585D4B00AC4A66 /* GFQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GFQuery.m; sourceTree = "<group>"; };
+		9A3E0B191D585E8300AC4A66 /* notefy-Bridging-header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "notefy-Bridging-header.h"; sourceTree = "<group>"; };
+		9A3E0B1C1D5861CA00AC4A66 /* NoteAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteAnnotation.swift; sourceTree = "<group>"; };
 		9A84BD6D1D582B0F00369027 /* notefy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = notefy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A84BD701D582B0F00369027 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		9A84BD721D582B0F00369027 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		9A84BD721D582B0F00369027 /* MapNotes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapNotes.swift; sourceTree = "<group>"; };
 		9A84BD751D582B0F00369027 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9A84BD771D582B0F00369027 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9A84BD7A1D582B0F00369027 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9A84BD7C1D582B0F00369027 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9A84BD821D5835B400369027 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		B5B2DCD7ADD6B80B01110F28 /* Pods-notefy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-notefy.release.xcconfig"; path = "Pods/Target Support Files/Pods-notefy/Pods-notefy.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +81,124 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A175B5E1D58811000BE67A0 /* MapKit.framework in Frameworks */,
+				50946DC8C900321956A3F61D /* Pods_notefy.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		21893D6FAF9C00B421BD158C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7C29F19BA3D415030ACBEF3F /* Pods-notefy.debug.xcconfig */,
+				B5B2DCD7ADD6B80B01110F28 /* Pods-notefy.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		60339940FF5D40428B687280 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9A175B5D1D58811000BE67A0 /* MapKit.framework */,
+				3478321058A3BE69238ABB9C /* Pods_notefy.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9A07DDF31D58F34C00360A0E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9A07DDF71D59065700360A0E /* DesignView.swift */,
+				9A07DDFC1D5909AE00360A0E /* FacebookButtonDesignView.swift */,
+				9A07DDFE1D590B4500360A0E /* PasswordDesignView.swift */,
+				9A07DE001D590DA700360A0E /* SignInDesignViewBTN.swift */,
+				9A07DE051D5953FB00360A0E /* cameraDesignViewSmoothRect.swift */,
+				9A07DE071D5961C200360A0E /* NoteCell.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		9A07DDF91D5906E800360A0E /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				9A07DDFA1D5906F900360A0E /* Constants.swift */,
+			);
+			name = Util;
+			sourceTree = "<group>";
+		};
+		9A07DE091D59704000360A0E /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				9A07DE0A1D59706400360A0E /* DatabaseService.swift */,
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
+		9A3E0B021D585D4B00AC4A66 /* GeoFire */ = {
+			isa = PBXGroup;
+			children = (
+				9A3E0B031D585D4B00AC4A66 /* API */,
+				9A3E0B081D585D4B00AC4A66 /* GeoFire-Prefix.pch */,
+				9A3E0B091D585D4B00AC4A66 /* Implementation */,
+			);
+			path = GeoFire;
+			sourceTree = "<group>";
+		};
+		9A3E0B031D585D4B00AC4A66 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				9A3E0B041D585D4B00AC4A66 /* GeoFire.h */,
+				9A3E0B051D585D4B00AC4A66 /* GFCircleQuery.h */,
+				9A3E0B061D585D4B00AC4A66 /* GFQuery.h */,
+				9A3E0B071D585D4B00AC4A66 /* GFRegionQuery.h */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		9A3E0B091D585D4B00AC4A66 /* Implementation */ = {
+			isa = PBXGroup;
+			children = (
+				9A3E0B0A1D585D4B00AC4A66 /* GeoFire+Private.h */,
+				9A3E0B0B1D585D4B00AC4A66 /* GeoFire.m */,
+				9A3E0B0C1D585D4B00AC4A66 /* GFBase32Utils.h */,
+				9A3E0B0D1D585D4B00AC4A66 /* GFBase32Utils.m */,
+				9A3E0B0E1D585D4B00AC4A66 /* GFGeoHash.h */,
+				9A3E0B0F1D585D4B00AC4A66 /* GFGeoHash.m */,
+				9A3E0B101D585D4B00AC4A66 /* GFGeoHashQuery.h */,
+				9A3E0B111D585D4B00AC4A66 /* GFGeoHashQuery.m */,
+				9A3E0B121D585D4B00AC4A66 /* GFQuery+Private.h */,
+				9A3E0B131D585D4B00AC4A66 /* GFQuery.m */,
+			);
+			path = Implementation;
+			sourceTree = "<group>";
+		};
+		9A3E0B1A1D58618900AC4A66 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				9A84BD721D582B0F00369027 /* MapNotes.swift */,
+				9A07DDF51D58F67300360A0E /* SignInVC.swift */,
+				9A07DE031D593E4A00360A0E /* NoteFeed.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		9A3E0B1B1D5861A000AC4A66 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9A3E0B1C1D5861CA00AC4A66 /* NoteAnnotation.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		9A84BD641D582B0F00369027 = {
 			isa = PBXGroup;
 			children = (
 				9A84BD6F1D582B0F00369027 /* notefy */,
 				9A84BD6E1D582B0F00369027 /* Products */,
+				21893D6FAF9C00B421BD158C /* Pods */,
+				60339940FF5D40428B687280 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,12 +213,20 @@
 		9A84BD6F1D582B0F00369027 /* notefy */ = {
 			isa = PBXGroup;
 			children = (
+				9A07DE091D59704000360A0E /* Services */,
+				9A07DE021D591C2300360A0E /* notefy.entitlements */,
+				9A07DDF91D5906E800360A0E /* Util */,
+				9A07DDF31D58F34C00360A0E /* View */,
+				9A3E0B1B1D5861A000AC4A66 /* Model */,
+				9A3E0B1A1D58618900AC4A66 /* Controller */,
+				9A3E0B021D585D4B00AC4A66 /* GeoFire */,
 				9A84BD701D582B0F00369027 /* AppDelegate.swift */,
-				9A84BD721D582B0F00369027 /* ViewController.swift */,
 				9A84BD741D582B0F00369027 /* Main.storyboard */,
 				9A84BD771D582B0F00369027 /* Assets.xcassets */,
 				9A84BD791D582B0F00369027 /* LaunchScreen.storyboard */,
 				9A84BD7C1D582B0F00369027 /* Info.plist */,
+				9A84BD821D5835B400369027 /* GoogleService-Info.plist */,
+				9A3E0B191D585E8300AC4A66 /* notefy-Bridging-header.h */,
 			);
 			path = notefy;
 			sourceTree = "<group>";
@@ -71,9 +238,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9A84BD7F1D582B0F00369027 /* Build configuration list for PBXNativeTarget "notefy" */;
 			buildPhases = (
+				E2D3D00DE75207AED170EF3A /* [CP] Check Pods Manifest.lock */,
 				9A84BD691D582B0F00369027 /* Sources */,
 				9A84BD6A1D582B0F00369027 /* Frameworks */,
 				9A84BD6B1D582B0F00369027 /* Resources */,
+				30BE47B64FD4AAA7B66BB6C1 /* [CP] Embed Pods Frameworks */,
+				A094AD8AEB1DD751849FF84E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -96,6 +266,15 @@
 				TargetAttributes = {
 					9A84BD6C1D582B0F00369027 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = F7BE6FVT4Q;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -123,6 +302,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9A84BD7B1D582B0F00369027 /* LaunchScreen.storyboard in Resources */,
+				9A84BD831D5835B400369027 /* GoogleService-Info.plist in Resources */,
 				9A84BD781D582B0F00369027 /* Assets.xcassets in Resources */,
 				9A84BD761D582B0F00369027 /* Main.storyboard in Resources */,
 			);
@@ -130,13 +310,77 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		30BE47B64FD4AAA7B66BB6C1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-notefy/Pods-notefy-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A094AD8AEB1DD751849FF84E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-notefy/Pods-notefy-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E2D3D00DE75207AED170EF3A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		9A84BD691D582B0F00369027 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9A84BD731D582B0F00369027 /* ViewController.swift in Sources */,
+				9A07DE0B1D59706400360A0E /* DatabaseService.swift in Sources */,
+				9A07DDFD1D5909AE00360A0E /* FacebookButtonDesignView.swift in Sources */,
+				9A3E0B1D1D5861CA00AC4A66 /* NoteAnnotation.swift in Sources */,
+				9A07DE061D5953FB00360A0E /* cameraDesignViewSmoothRect.swift in Sources */,
+				9A07DE081D5961C200360A0E /* NoteCell.swift in Sources */,
+				9A07DDFB1D5906F900360A0E /* Constants.swift in Sources */,
+				9A3E0B151D585D4B00AC4A66 /* GFBase32Utils.m in Sources */,
+				9A07DDF81D59065700360A0E /* DesignView.swift in Sources */,
+				9A07DDF61D58F67300360A0E /* SignInVC.swift in Sources */,
+				9A84BD731D582B0F00369027 /* MapNotes.swift in Sources */,
+				9A07DDFF1D590B4500360A0E /* PasswordDesignView.swift in Sources */,
+				9A3E0B161D585D4B00AC4A66 /* GFGeoHash.m in Sources */,
+				9A07DE011D590DA700360A0E /* SignInDesignViewBTN.swift in Sources */,
 				9A84BD711D582B0F00369027 /* AppDelegate.swift in Sources */,
+				9A07DE041D593E4B00360A0E /* NoteFeed.swift in Sources */,
+				9A3E0B141D585D4B00AC4A66 /* GeoFire.m in Sources */,
+				9A3E0B171D585D4B00AC4A66 /* GFGeoHashQuery.m in Sources */,
+				9A3E0B181D585D4B00AC4A66 /* GFQuery.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -249,23 +493,39 @@
 		};
 		9A84BD801D582B0F00369027 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7C29F19BA3D415030ACBEF3F /* Pods-notefy.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = notefy/notefy.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = notefy/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sagigilid.notefy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "notefy/notefy-Bridging-header.h";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		9A84BD811D582B0F00369027 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B5B2DCD7ADD6B80B01110F28 /* Pods-notefy.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = notefy/notefy.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = notefy/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sagigilid.notefy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "notefy/notefy-Bridging-header.h";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -288,6 +548,7 @@
 				9A84BD811D582B0F00369027 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
