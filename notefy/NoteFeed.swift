@@ -54,8 +54,13 @@ class NoteFeed: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let note = notes[indexPath.row]
-        print ("\(note.caption)")
-        return tableView.dequeueReusableCellWithIdentifier("NoteCell") as! NoteCell
+        
+        if let cell = tableView.dequeueReusableCellWithIdentifier("NoteCell") as? NoteCell {
+            cell.configureCell(note)
+            return cell
+        } else {
+            return NoteCell()
+        }
     }
     
     override func didReceiveMemoryWarning() {

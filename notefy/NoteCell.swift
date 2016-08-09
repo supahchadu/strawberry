@@ -14,8 +14,16 @@ class NoteCell: UITableViewCell {
     @IBOutlet weak var noteCaption: UITextView!
     @IBOutlet weak var noteLikes: UILabel!
     
+    var note: Note!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         
+    }
+    
+    func configureCell(notes: Note) {
+        self.note = notes
+        self.noteCaption.text = note.caption
+        self.noteLikes.text = "\(note.likes)"
     }
 }
