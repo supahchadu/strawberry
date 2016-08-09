@@ -16,12 +16,16 @@ class NoteFeed: UIViewController, UITableViewDelegate, UITableViewDataSource, UI
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var addImage: cameraDesignViewSmoothRect!
+    @IBOutlet weak var noteMessageField: PasswordDesignView!
     
     var notes = [Note]()
     var imagePicker: UIImagePickerController!
     
     // Global Cache in phones image
     static var imageCache: NSCache = NSCache()
+    
+    // Preventing to upload the icon image placeholder to the storage.
+    var imageSelected = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -85,6 +89,7 @@ class NoteFeed: UIViewController, UITableViewDelegate, UITableViewDataSource, UI
         // We need the edited image first before we take it!
         if let image = info[UIImagePickerControllerEditedImage] as? UIImage {
             addImage.image = image // Set our image button as the image the user chose~
+            imageSelected = true
         } else {
             print("Invalid Image selected")
         }
@@ -102,6 +107,49 @@ class NoteFeed: UIViewController, UITableViewDelegate, UITableViewDataSource, UI
     
     @IBAction func addImageNoteTapped(sender: AnyObject) {
         presentViewController(imagePicker, animated: true, completion: nil)
+    }
+    
+    // uploading the chosen image and then posting the notes on the database and onto the tableView
+    @IBAction func postNoteOnMapTapped(sender: AnyObject) {
+        // Make sure theres a message on the note message field! if not then errr...
+        guard let caption = noteMessageField.text where caption != "" else {
+            print("Message must be entered!")
+            return
+        }
+        
+        // We need at least an image!
+        guard let img = addImage.image where imageSelected == true else {
+            print("No Immage is selected")
+            return
+        }
+        
+        // Uploading image via JPEG format and tone it down for fast cache
+        // and fast storage and upload! No Massive data please~
+        if let imgData = UIImageJPEGRepresentation(img, 0.2){
+            
+            // We create a unique Identifier for the image to be uploaded
+            let imgUid = NSUUID().UUIDString
+            // Which type of image we want to store
+            let metaData = FIRStorageMetadata()
+            metaData.contentType = "img/jpeg" // Set the content or type of image
+            
+            // Now we push the data to the database storage with a Unique Identifier, the image, and the type it is.
+            DatabaseService.databaseService.REF_IMAGES.child(imgUid).putData(imgData, metadata: metaData, completion: {(metadata, error) in
+                if error != nil {
+                    print("Unable to upload image from the database storage = \(error)")
+                } else {
+                    print("Successfully uploaded image to the database storage")
+                    // Now for the posting purposes,  we need the URL to store and post for our feed.
+                    let downloadURL = metadata?.downloadURL()?.absoluteString
+                    
+                }
+            })
+            
+        }
+        
+        
+        
+        
     }
     
     @IBAction func signOutButton(sender: AnyObject) {

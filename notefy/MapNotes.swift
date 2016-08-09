@@ -153,6 +153,7 @@ class MapNotes: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
                 MKMapItem.openMapsWithItems([destination], launchOptions: options)
             }
         } else {
+            // Adding the notes to our feed!
             let anno = view.annotation as? NoteAnnotation
             let toastLabel = UILabel(frame: CGRectMake(self.view.frame.size.width/2 - 150, self.view.frame.size.height-100, 300, 35))
             toastLabel.backgroundColor = UIColor.blackColor()
@@ -168,6 +169,7 @@ class MapNotes: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
                 toastLabel.alpha = 0.0
                 
             }, completion: nil)
+            
             self.mapView.removeAnnotation(anno!)
         
         }

@@ -333,6 +333,9 @@
                                                     <constraint firstAttribute="height" constant="59" id="UBq-xg-PnH"/>
                                                 </constraints>
                                                 <state key="normal" title="Write!" image="add-post"/>
+                                                <connections>
+                                                    <action selector="postNoteOnMapTapped:" destination="45e-dE-TeF" eventType="touchUpInside" id="Enz-IY-0IC"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -470,6 +473,7 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="addImage" destination="bov-V2-GoF" id="n6R-2a-h3C"/>
+                        <outlet property="noteMessageField" destination="uEA-QG-Zf9" id="d2B-XD-A71"/>
                         <outlet property="tableView" destination="bjt-Kh-lMt" id="zwO-4O-Wor"/>
                         <segue destination="ftv-iV-bHS" kind="show" identifier="goToSignIn" id="JTE-v3-ALA"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="gotoNoteMaps" id="BeL-Kw-lei"/>
