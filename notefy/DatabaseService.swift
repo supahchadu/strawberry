@@ -1,4 +1,5 @@
 //
+//  Singleton-Class
 //  DatabaseService.swift
 //  notefy
 //
@@ -9,6 +10,34 @@
 import Foundation
 import FirebaseDatabase
 
+// Global Referrence that contains the database URL
+// Becareful not for stealing or hacking or anything.
+let DB_SERVICE = FIRDatabase.database().reference()
+
 class DatabaseService {
+    // Single Instance and only for referrence to be accessed to any class
+    static let databaseService = DatabaseService()
+    private var _REF_BASE = DB_SERVICE
+    private var _REF_NOTES = DB_SERVICE.child("notes")
+    private var _REF_USERS = DB_SERVICE.child("users")
     
+    // Local Accessors for the private referrences.
+    var REF_BASE: FIRDatabaseReference {
+        return _REF_BASE
+    }
+    
+    var REF_NOTES: FIRDatabaseReference {
+        return _REF_NOTES
+    }
+    
+    var REF_USERS: FIRDatabaseReference {
+        return _REF_USERS
+    }
+    
+    // Handling Users created (equal) to the User being Authenticated
+    // Dictionary datastructure to get them.
+    func createFirebaseDBUser(uid: String, userData: Dictionary<String, String>) {
+        // If the data doesnt exist? then create! if There is! then just updates the data under it...
+        REF_USERS.child(uid).updateChildValues(userData)
+    }
 }

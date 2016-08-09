@@ -71,7 +71,8 @@ class SignInVC: UIViewController {
             }else {
                 print("Successfully Authenticated with Firebase")
                 if let user = result { // Encapsulate the Keychain wrapper and save the user login data on Keychain
-                    self.completeSignIn(user.uid)// Auto Login
+                    let userData = ["provide": credential.provider]
+                    self.completeSignIn(user.uid, userData: userData)// Auto Login
                 }
             }
         })
@@ -86,7 +87,8 @@ class SignInVC: UIViewController {
                     print("User is Authenticated with Firebase")
                     
                     if let user = user {
-                        self.completeSignIn(user.uid) // Save login data to keychain
+                        let userData = ["provide": user.providerID]
+                        self.completeSignIn(user.uid, userData: userData)
                     }
                     
                     let alert = UIAlertController(title: "Notefy", message: "Your account has been successfully created!", preferredStyle: UIAlertControllerStyle.Alert)
@@ -103,7 +105,8 @@ class SignInVC: UIViewController {
                         }else {
                             print("Successfully authenticate with Firebase")
                             if let user = user {
-                                self.completeSignIn(user.uid) // Save login data to keychain
+                                let userData = ["provider": user.providerID]
+                                self.completeSignIn(user.uid, userData: userData) // Save login data to keychain
                             }
                         }
                     })
@@ -115,7 +118,8 @@ class SignInVC: UIViewController {
     
     // Function that saves the login data after the successfull authentication on both Firebase and 
     // Facebook.
-    func completeSignIn(id: String) {
+    func completeSignIn(id: String, userData: Dictionary<String, String>) {
+        DatabaseService.databaseService.createFirebaseDBUser(id, userData: userData)
         let keychainResult = KeychainWrapper.setString(id, forKey: KEY_UID)
         print("Login Data saved to keychain \(keychainResult)")
         performSegueWithIdentifier("goToNoteFeed", sender: nil)
