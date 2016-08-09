@@ -15,6 +15,8 @@ class NoteFeed: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var tableView: UITableView!
     
+    var notes = [Note]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
@@ -22,8 +24,22 @@ class NoteFeed: UIViewController, UITableViewDelegate, UITableViewDataSource {
         
         // Observe a live changing data from the database
         DatabaseService.databaseService.REF_NOTES.observeEventType(.Value, withBlock: { (snapshot) in
-            print(snapshot.value)
+            
+            if let snapshots = snapshot.children.allObjects as? [FIRDataSnapshot] {
+                for snap in snapshots {
+                    print("SNAP: \(snap)")
+                    
+                    if let noteDict = snap.value as? Dictionary<String, AnyObject> {
+                        let key = snap.key
+                        let note = Note(noteKey: key, noteData: noteDict)
+                        self.notes.append(note)
+                    }
+                }
+            }
+            self.tableView.reloadData()
         })
+        
+        
         
     }
     
@@ -32,10 +48,13 @@ class NoteFeed: UIViewController, UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return notes.count
+        
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let note = notes[indexPath.row]
+        print ("\(note.caption)")
         return tableView.dequeueReusableCellWithIdentifier("NoteCell") as! NoteCell
     }
     

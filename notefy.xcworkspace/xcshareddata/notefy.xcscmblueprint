@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "83B967477ED41DE67996ECA5932EA35FA6F364EC",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "7F79F9909BAD9E416227DCCEDE3EC971DE36C673" : 0,
+    "83B967477ED41DE67996ECA5932EA35FA6F364EC" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "22314BDA-4740-488E-B1AF-93727A8769FC",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "7F79F9909BAD9E416227DCCEDE3EC971DE36C673" : "",
+    "83B967477ED41DE67996ECA5932EA35FA6F364EC" : "notefy\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "notefy",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "notefy.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/supahchadu\/sagigilid.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "7F79F9909BAD9E416227DCCEDE3EC971DE36C673"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/supahchadu\/strawberry.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "83B967477ED41DE67996ECA5932EA35FA6F364EC"
+    }
+  ]
+}

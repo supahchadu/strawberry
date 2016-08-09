@@ -18,6 +18,7 @@
 		9A07DE061D5953FB00360A0E /* cameraDesignViewSmoothRect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A07DE051D5953FB00360A0E /* cameraDesignViewSmoothRect.swift */; };
 		9A07DE081D5961C200360A0E /* NoteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A07DE071D5961C200360A0E /* NoteCell.swift */; };
 		9A07DE0B1D59706400360A0E /* DatabaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A07DE0A1D59706400360A0E /* DatabaseService.swift */; };
+		9A07DE0D1D598B6C00360A0E /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A07DE0C1D598B6C00360A0E /* Note.swift */; };
 		9A175B5E1D58811000BE67A0 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A175B5D1D58811000BE67A0 /* MapKit.framework */; };
 		9A3E0B141D585D4B00AC4A66 /* GeoFire.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A3E0B0B1D585D4B00AC4A66 /* GeoFire.m */; };
 		9A3E0B151D585D4B00AC4A66 /* GFBase32Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A3E0B0D1D585D4B00AC4A66 /* GFBase32Utils.m */; };
@@ -47,6 +48,7 @@
 		9A07DE051D5953FB00360A0E /* cameraDesignViewSmoothRect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = cameraDesignViewSmoothRect.swift; sourceTree = "<group>"; };
 		9A07DE071D5961C200360A0E /* NoteCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteCell.swift; sourceTree = "<group>"; };
 		9A07DE0A1D59706400360A0E /* DatabaseService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatabaseService.swift; sourceTree = "<group>"; };
+		9A07DE0C1D598B6C00360A0E /* Note.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
 		9A175B5D1D58811000BE67A0 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		9A3E0B041D585D4B00AC4A66 /* GeoFire.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeoFire.h; sourceTree = "<group>"; };
 		9A3E0B051D585D4B00AC4A66 /* GFCircleQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GFCircleQuery.h; sourceTree = "<group>"; };
@@ -188,6 +190,7 @@
 			isa = PBXGroup;
 			children = (
 				9A3E0B1C1D5861CA00AC4A66 /* NoteAnnotation.swift */,
+				9A07DE0C1D598B6C00360A0E /* Note.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -372,6 +375,7 @@
 				9A3E0B151D585D4B00AC4A66 /* GFBase32Utils.m in Sources */,
 				9A07DDF81D59065700360A0E /* DesignView.swift in Sources */,
 				9A07DDF61D58F67300360A0E /* SignInVC.swift in Sources */,
+				9A07DE0D1D598B6C00360A0E /* Note.swift in Sources */,
 				9A84BD731D582B0F00369027 /* MapNotes.swift in Sources */,
 				9A07DDFF1D590B4500360A0E /* PasswordDesignView.swift in Sources */,
 				9A3E0B161D585D4B00AC4A66 /* GFGeoHash.m in Sources */,
