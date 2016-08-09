@@ -18,8 +18,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TTN-Au-IPu">
-                                <rect key="frame" x="21" y="569" width="97" height="62"/>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eOb-1t-XkU">
+                                <rect key="frame" x="-4" y="0.0" width="383" height="667"/>
+                            </mapView>
+                            <button opaque="NO" contentMode="scaleAspectFit" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TTN-Au-IPu">
+                                <rect key="frame" x="20" y="569" width="97" height="62"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="97" id="TVa-SV-sff"/>
                                     <constraint firstAttribute="height" constant="62" id="cof-ap-gq3"/>
@@ -35,9 +38,6 @@
                                     <action selector="addRandomNotes:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Gh1-nS-4RW"/>
                                 </connections>
                             </button>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eOb-1t-XkU">
-                                <rect key="frame" x="-4" y="0.0" width="383" height="667"/>
-                            </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -147,14 +147,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter username...." textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="L38-h8-Mpy" customClass="PasswordDesignView" customModule="notefy" customModuleProvider="target">
-                                <rect key="frame" x="53" y="392" width="269" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="269" id="Bmc-Oc-KuR"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JZL-YO-zaW" customClass="DesignView" customModule="notefy" customModuleProvider="target">
                                 <rect key="frame" x="-4" y="0.0" width="383" height="124"/>
                                 <subviews>
@@ -175,6 +167,14 @@
                                     <constraint firstAttribute="height" constant="124" id="k1V-g7-UEy"/>
                                 </constraints>
                             </view>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter username...." textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="L38-h8-Mpy" customClass="PasswordDesignView" customModule="notefy" customModuleProvider="target">
+                                <rect key="frame" x="53" y="392" width="269" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="269" id="Bmc-Oc-KuR"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="0.93800503068128005" green="0.93780025855715865" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -268,17 +268,31 @@
                                             <action selector="signOutButton:" destination="45e-dE-TeF" eventType="touchUpInside" id="Wy2-i1-OcV"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rcH-Li-mwV" customClass="FacebookButtonDesignView" customModule="notefy" customModuleProvider="target">
+                                        <rect key="frame" x="321" y="13" width="49" height="42"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="49" id="oAG-St-tT9"/>
+                                            <constraint firstAttribute="height" constant="42" id="rco-WV-04r"/>
+                                        </constraints>
+                                        <state key="normal" title="Button" image="location-map-flat"/>
+                                        <connections>
+                                            <action selector="mapFeedButtonTapped:" destination="45e-dE-TeF" eventType="touchUpInside" id="o3n-bU-Sxz"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.2862048432" green="0.82409604059999997" blue="0.59735710990000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="E9I-uz-GLr" secondAttribute="bottom" constant="12" id="Bxv-yi-0uS"/>
+                                    <constraint firstAttribute="bottom" secondItem="rcH-Li-mwV" secondAttribute="bottom" constant="12" id="KMX-aX-kBu"/>
                                     <constraint firstAttribute="trailing" secondItem="E9I-uz-GLr" secondAttribute="trailing" constant="87" id="Pxt-b8-dzz"/>
                                     <constraint firstItem="LXb-Qw-sjp" firstAttribute="leading" secondItem="3wZ-r8-KGV" secondAttribute="leading" constant="13" id="SDZ-4i-8bV"/>
                                     <constraint firstItem="E9I-uz-GLr" firstAttribute="centerX" secondItem="3wZ-r8-KGV" secondAttribute="centerX" id="UlD-zq-xzf"/>
                                     <constraint firstItem="LXb-Qw-sjp" firstAttribute="top" secondItem="3wZ-r8-KGV" secondAttribute="top" constant="8" id="axa-il-YDJ"/>
                                     <constraint firstItem="E9I-uz-GLr" firstAttribute="leading" secondItem="LXb-Qw-sjp" secondAttribute="trailing" constant="25" id="eCB-p3-49C"/>
                                     <constraint firstItem="E9I-uz-GLr" firstAttribute="top" secondItem="3wZ-r8-KGV" secondAttribute="top" id="eLA-ok-7ye"/>
+                                    <constraint firstAttribute="trailing" secondItem="rcH-Li-mwV" secondAttribute="trailing" constant="13" id="ePU-BN-1X2"/>
                                     <constraint firstAttribute="bottom" secondItem="E9I-uz-GLr" secondAttribute="bottom" constant="12" id="h7z-jD-fIb"/>
+                                    <constraint firstItem="rcH-Li-mwV" firstAttribute="top" secondItem="3wZ-r8-KGV" secondAttribute="top" constant="13" id="jw5-DX-8n2"/>
                                     <constraint firstItem="E9I-uz-GLr" firstAttribute="leading" secondItem="LXb-Qw-sjp" secondAttribute="trailing" constant="25" id="mWL-NQ-NgA"/>
                                 </constraints>
                             </view>
@@ -458,6 +472,7 @@
                         <outlet property="addImage" destination="bov-V2-GoF" id="n6R-2a-h3C"/>
                         <outlet property="tableView" destination="bjt-Kh-lMt" id="zwO-4O-Wor"/>
                         <segue destination="ftv-iV-bHS" kind="show" identifier="goToSignIn" id="JTE-v3-ALA"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="gotoNoteMaps" id="BeL-Kw-lei"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sZS-vW-w91" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -475,6 +490,7 @@
         <image name="add-image" width="88" height="88"/>
         <image name="add-post" width="88" height="88"/>
         <image name="f" width="352" height="328"/>
+        <image name="location-map-flat" width="256" height="256"/>
         <image name="profile" width="113" height="155"/>
         <image name="snap_btn" width="54" height="62"/>
     </resources>

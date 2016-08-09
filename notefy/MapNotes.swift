@@ -98,10 +98,16 @@ class MapNotes: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
         if let annotationView = annotationView, let anno = annotation as? NoteAnnotation {
             annotationView.canShowCallout = true;
             annotationView.image = UIImage(named: "\(anno.noteNumber)")
+            
             let btn = UIButton()
             btn.frame = CGRect(x: 0, y: 0, width: 30, height: 30)
             btn.setImage(UIImage(named: "map"), forState: UIControlState.Normal)
             annotationView.rightCalloutAccessoryView = btn
+            
+            let btn2 = FacebookButtonDesignView()
+            btn2.frame = CGRect(x: 0, y: 0, width: 30, height: 30)
+            btn2.setImage(UIImage(named: "addsnaptostory"), forState: UIControlState.Normal)
+            annotationView.leftCalloutAccessoryView = btn2
             
             
         }
@@ -116,6 +122,7 @@ class MapNotes: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
             if let key = key, let location = location {
                 let anno = NoteAnnotation(coordinate: location.coordinate, noteNumber: Int(key)!)
                 self.mapView.addAnnotation(anno)
+                
             }
         
         })
@@ -132,16 +139,37 @@ class MapNotes: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
     }
 
     func mapView(mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
-        if let anno = view.annotation as? NoteAnnotation {
-            var addressDictionary: [String:String]?
-            let place = MKPlacemark(coordinate: anno.coordinate, addressDictionary: addressDictionary)
-            let destination = MKMapItem(placemark: place)
-            destination.name = "Note Sighted"
-            let regionDistance: CLLocationDistance = 1000
-            let regionSpan = MKCoordinateRegionMakeWithDistance(anno.coordinate, regionDistance, regionDistance)
-            let options = [MKLaunchOptionsMapCenterKey: NSValue(MKCoordinate: regionSpan.center),MKLaunchOptionsMapSpanKey: NSValue(MKCoordinateSpan:regionSpan.span),MKLaunchOptionsDirectionsModeKey: MKLaunchOptionsDirectionsModeDriving ]
-            MKMapItem.openMapsWithItems([destination], launchOptions: options)
-            
+       
+        if control == view.rightCalloutAccessoryView {
+    
+            if let anno = view.annotation as? NoteAnnotation {
+                var addressDictionary: [String:String]?
+                let place = MKPlacemark(coordinate: anno.coordinate, addressDictionary: addressDictionary)
+                let destination = MKMapItem(placemark: place)
+                destination.name = "Note Sighted"
+                let regionDistance: CLLocationDistance = 1000
+                let regionSpan = MKCoordinateRegionMakeWithDistance(anno.coordinate, regionDistance, regionDistance)
+                let options = [MKLaunchOptionsMapCenterKey: NSValue(MKCoordinate: regionSpan.center),MKLaunchOptionsMapSpanKey: NSValue(MKCoordinateSpan:regionSpan.span),MKLaunchOptionsDirectionsModeKey: MKLaunchOptionsDirectionsModeDriving ]
+                MKMapItem.openMapsWithItems([destination], launchOptions: options)
+            }
+        } else {
+            let anno = view.annotation as? NoteAnnotation
+            let toastLabel = UILabel(frame: CGRectMake(self.view.frame.size.width/2 - 150, self.view.frame.size.height-100, 300, 35))
+            toastLabel.backgroundColor = UIColor.blackColor()
+            toastLabel.textColor = UIColor.whiteColor()
+            toastLabel.textAlignment = NSTextAlignment.Center;
+            self.view.addSubview(toastLabel)
+            toastLabel.text = "Succesfully added note!"
+            toastLabel.alpha = 1.0
+            toastLabel.layer.cornerRadius = 10
+            toastLabel.clipsToBounds  =  true
+            UIView.animateWithDuration(4.0, delay: 0.1, options: UIViewAnimationOptions.CurveEaseOut, animations: {
+                
+                toastLabel.alpha = 0.0
+                
+            }, completion: nil)
+            self.mapView.removeAnnotation(anno!)
+        
         }
     }
     
@@ -153,8 +181,7 @@ class MapNotes: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
     @IBAction func addRandomNotes(sender: AnyObject) {
         
         let loc = CLLocation(latitude: mapView.centerCoordinate.latitude, longitude: mapView.centerCoordinate.longitude)
-        let rand = arc4random_uniform(3) + 1
-        createNoteLocation(forLocation: loc, hasNote: Int(rand))
+        createNoteLocation(forLocation: loc, hasNote: Int(1))
     }
 
 }

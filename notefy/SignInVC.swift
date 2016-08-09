@@ -14,7 +14,7 @@ import FBSDKLoginKit
 import Firebase
 import SwiftKeychainWrapper
 
-class SignInVC: UIViewController {
+class SignInVC: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var passField: PasswordDesignView!
     @IBOutlet weak var emailField: PasswordDesignView!
@@ -22,6 +22,12 @@ class SignInVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        emailField.delegate = self
+        passField.delegate = self
+        emailField.becomeFirstResponder()
+        
+        
         
     }
     
@@ -124,6 +130,9 @@ class SignInVC: UIViewController {
         print("Login Data saved to keychain \(keychainResult)")
         performSegueWithIdentifier("goToNoteFeed", sender: nil)
     }
+    
+    // ---- VIEW Helper -----
+    
 }
 
 

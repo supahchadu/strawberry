@@ -65,7 +65,6 @@ class NoteFeed: UIViewController, UITableViewDelegate, UITableViewDataSource, UI
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let note = notes[indexPath.row]
-        
         if let cell = tableView.dequeueReusableCellWithIdentifier("NoteCell") as? NoteCell {
             
             if let imgs = NoteFeed.imageCache.objectForKey(note.imageUrl) {
@@ -95,6 +94,10 @@ class NoteFeed: UIViewController, UITableViewDelegate, UITableViewDataSource, UI
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    @IBAction func mapFeedButtonTapped(sender: AnyObject) {
+        performSegueWithIdentifier("gotoNoteMaps", sender: nil)
     }
     
     @IBAction func addImageNoteTapped(sender: AnyObject) {
