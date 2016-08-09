@@ -46,7 +46,7 @@ class Note {
             self._caption = caption
         }
         
-        if let imageUrl = noteData["image"] as? String {
+        if let imageUrl = noteData["imageUrl"] as? String {
             self._imageUrl = imageUrl
         }
         

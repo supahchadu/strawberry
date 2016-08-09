@@ -8,11 +8,12 @@
 //
 
 import Foundation
-import FirebaseDatabase
+import Firebase
 
 // Global Referrence that contains the database URL
 // Becareful not for stealing or hacking or anything.
 let DB_SERVICE = FIRDatabase.database().reference()
+let STORAGE_BASE = FIRStorage.storage().reference()
 
 class DatabaseService {
     // Single Instance and only for referrence to be accessed to any class
@@ -20,6 +21,9 @@ class DatabaseService {
     private var _REF_BASE = DB_SERVICE
     private var _REF_NOTES = DB_SERVICE.child("notes")
     private var _REF_USERS = DB_SERVICE.child("users")
+    
+    // Storage referrences
+    private var _REF_NOTES_IMAGES = STORAGE_BASE.child("note-pics")
     
     // Local Accessors for the private referrences.
     var REF_BASE: FIRDatabaseReference {
@@ -32,6 +36,10 @@ class DatabaseService {
     
     var REF_USERS: FIRDatabaseReference {
         return _REF_USERS
+    }
+    
+    var REF_IMAGES: FIRStorageReference {
+        return _REF_NOTES_IMAGES
     }
     
     // Handling Users created (equal) to the User being Authenticated

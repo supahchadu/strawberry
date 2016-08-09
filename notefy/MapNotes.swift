@@ -39,11 +39,6 @@ class MapNotes: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
         
     }
     
-    // Function pass the location to the database with the notes to be created there.
-    func createNoteLocation(forLocation location: CLLocation, hasNote noteId: Int){
-        geoFire.setLocation(location, forKey: "\(noteId)")
-    }
-    
     
     func locationAuthStatus() {
         // Ask for the authorization for Google Location
@@ -149,12 +144,17 @@ class MapNotes: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
             
         }
     }
+    
+    // Function pass the location to the database with the notes to be created there.
+    func createNoteLocation(forLocation location: CLLocation, hasNote noteId: Int){
+        geoFire.setLocation(location, forKey: "\(noteId)")
+    }
+    
     @IBAction func addRandomNotes(sender: AnyObject) {
         
         let loc = CLLocation(latitude: mapView.centerCoordinate.latitude, longitude: mapView.centerCoordinate.longitude)
         let rand = arc4random_uniform(3) + 1
         createNoteLocation(forLocation: loc, hasNote: Int(rand))
-        
     }
 
 }

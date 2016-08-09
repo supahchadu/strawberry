@@ -10,17 +10,28 @@ import UIKit
 import Firebase
 import SwiftKeychainWrapper
 
-class NoteFeed: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class NoteFeed: UIViewController, UITableViewDelegate, UITableViewDataSource, UIImagePickerControllerDelegate,
+    UINavigationControllerDelegate {
 
     
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var addImage: cameraDesignViewSmoothRect!
     
     var notes = [Note]()
+    var imagePicker: UIImagePickerController!
+    
+    // Global Cache in phones image
+    static var imageCache: NSCache = NSCache()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
+        
+        // initializing our image pick and edit photo
+        imagePicker = UIImagePickerController()
+        imagePicker.allowsEditing = true
+        imagePicker.delegate = self
         
         // Observe a live changing data from the database
         DatabaseService.databaseService.REF_NOTES.observeEventType(.Value, withBlock: { (snapshot) in
@@ -56,16 +67,38 @@ class NoteFeed: UIViewController, UITableViewDelegate, UITableViewDataSource {
         let note = notes[indexPath.row]
         
         if let cell = tableView.dequeueReusableCellWithIdentifier("NoteCell") as? NoteCell {
-            cell.configureCell(note)
-            return cell
+            
+            if let imgs = NoteFeed.imageCache.objectForKey(note.imageUrl) {
+                cell.configureCell(note, img: imgs as? UIImage)
+                return cell
+            }else {
+                cell.configureCell(note, img: nil)
+                return cell
+            }
         } else {
+    
             return NoteCell()
         }
+    }
+
+    // For choosing image via Galleria in iPhones
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
+        // We need the edited image first before we take it!
+        if let image = info[UIImagePickerControllerEditedImage] as? UIImage {
+            addImage.image = image // Set our image button as the image the user chose~
+        } else {
+            print("Invalid Image selected")
+        }
+        imagePicker.dismissViewControllerAnimated(true, completion: nil)
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    @IBAction func addImageNoteTapped(sender: AnyObject) {
+        presentViewController(imagePicker, animated: true, completion: nil)
     }
     
     @IBAction func signOutButton(sender: AnyObject) {

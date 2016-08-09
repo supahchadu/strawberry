@@ -288,9 +288,10 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="rTw-Mw-Ymp">
                                         <rect key="frame" x="8" y="8" width="338" height="59"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="add-image" translatesAutoresizingMaskIntoConstraints="NO" id="bov-V2-GoF" customClass="cameraDesignViewSmoothRect" customModule="notefy" customModuleProvider="target">
+                                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="add-image" translatesAutoresizingMaskIntoConstraints="NO" id="bov-V2-GoF" customClass="cameraDesignViewSmoothRect" customModule="notefy" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="60" height="59"/>
                                                 <color key="backgroundColor" red="0.2177221936" green="0.69840068720000004" blue="0.46633182909999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                <gestureRecognizers/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="49" id="TYL-j3-jsl"/>
                                                     <constraint firstAttribute="width" constant="60" id="cEY-SL-n9K"/>
@@ -300,6 +301,9 @@
                                                         <exclude reference="TYL-j3-jsl"/>
                                                     </mask>
                                                 </variation>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="ADr-VZ-3y3" appends="YES" id="7y5-ju-TNR"/>
+                                                </connections>
                                             </imageView>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uEA-QG-Zf9" customClass="PasswordDesignView" customModule="notefy" customModuleProvider="target">
                                                 <rect key="frame" x="69" y="0.0" width="200" height="59"/>
@@ -372,13 +376,6 @@
                                                             <color key="textColor" red="0.7686274509803922" green="0.81176470588235294" blue="0.83137254901960789" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <imageView clipsSubviews="YES" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile" translatesAutoresizingMaskIntoConstraints="NO" id="BpA-Ey-hft" customClass="cameraDesignViewSmoothRect" customModule="notefy" customModuleProvider="target">
-                                                            <rect key="frame" x="8" y="8" width="85" height="78"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="height" constant="78" id="azI-on-9wJ"/>
-                                                                <constraint firstAttribute="width" constant="85" id="inL-mJ-UJJ"/>
-                                                            </constraints>
-                                                        </imageView>
                                                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nNW-X3-AGt">
                                                             <rect key="frame" x="8" y="89" width="343" height="142"/>
                                                             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -386,25 +383,37 @@
                                                             <fontDescription key="fontDescription" name="GurmukhiMN" family="Gurmukhi MN" pointSize="12"/>
                                                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                         </textView>
+                                                        <imageView clipsSubviews="YES" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile" translatesAutoresizingMaskIntoConstraints="NO" id="BpA-Ey-hft" customClass="cameraDesignViewSmoothRect" customModule="notefy" customModuleProvider="target">
+                                                            <rect key="frame" x="137" y="8" width="85" height="78"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="85" id="9J5-C1-bHm"/>
+                                                                <constraint firstAttribute="height" constant="78" id="eJy-bd-haZ"/>
+                                                            </constraints>
+                                                        </imageView>
                                                     </subviews>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <constraints>
                                                         <constraint firstItem="nNW-X3-AGt" firstAttribute="top" secondItem="BpA-Ey-hft" secondAttribute="bottom" constant="3" id="0I6-Pv-cb2"/>
                                                         <constraint firstItem="MXf-4F-g4g" firstAttribute="leading" secondItem="BvN-ac-YR6" secondAttribute="leading" id="2Fr-hc-ryI"/>
+                                                        <constraint firstItem="MXf-4F-g4g" firstAttribute="leading" secondItem="BpA-Ey-hft" secondAttribute="trailing" constant="75" id="9y9-rN-qp5"/>
                                                         <constraint firstAttribute="trailing" secondItem="nNW-X3-AGt" secondAttribute="trailing" constant="8" id="B2m-Mj-c5x"/>
                                                         <constraint firstItem="BpA-Ey-hft" firstAttribute="top" secondItem="LJQ-bd-moE" secondAttribute="top" constant="8" id="F9F-zh-lw2"/>
+                                                        <constraint firstItem="BpA-Ey-hft" firstAttribute="top" secondItem="LJQ-bd-moE" secondAttribute="top" constant="8" id="HvQ-ay-6dV"/>
                                                         <constraint firstItem="nNW-X3-AGt" firstAttribute="leading" secondItem="LJQ-bd-moE" secondAttribute="leading" constant="8" id="OeI-1x-fZC"/>
                                                         <constraint firstItem="MXf-4F-g4g" firstAttribute="centerX" secondItem="BvN-ac-YR6" secondAttribute="centerX" id="SMZ-Js-mSi"/>
                                                         <constraint firstAttribute="trailing" secondItem="BvN-ac-YR6" secondAttribute="trailing" constant="8" id="TUL-6Z-Gzp"/>
                                                         <constraint firstItem="nNW-X3-AGt" firstAttribute="centerX" secondItem="LJQ-bd-moE" secondAttribute="centerX" id="acK-op-eii"/>
                                                         <constraint firstItem="BpA-Ey-hft" firstAttribute="leading" secondItem="LJQ-bd-moE" secondAttribute="leading" constant="8" id="agB-NK-q60"/>
                                                         <constraint firstItem="BvN-ac-YR6" firstAttribute="top" secondItem="LJQ-bd-moE" secondAttribute="top" constant="8" id="cuf-9W-lXM"/>
+                                                        <constraint firstItem="BpA-Ey-hft" firstAttribute="leading" secondItem="LJQ-bd-moE" secondAttribute="leading" constant="137" id="dgq-zn-TbZ"/>
                                                         <constraint firstAttribute="bottom" secondItem="nNW-X3-AGt" secondAttribute="bottom" constant="26" id="maJ-VQ-zoU"/>
                                                         <constraint firstItem="MXf-4F-g4g" firstAttribute="leading" secondItem="BvN-ac-YR6" secondAttribute="leading" id="tce-0V-ob5"/>
                                                         <constraint firstItem="nNW-X3-AGt" firstAttribute="top" secondItem="MXf-4F-g4g" secondAttribute="bottom" constant="8" symbolic="YES" id="xsm-AJ-Oob"/>
                                                     </constraints>
                                                     <variation key="default">
                                                         <mask key="constraints">
+                                                            <exclude reference="agB-NK-q60"/>
+                                                            <exclude reference="dgq-zn-TbZ"/>
                                                             <exclude reference="2Fr-hc-ryI"/>
                                                             <exclude reference="SMZ-Js-mSi"/>
                                                         </mask>
@@ -446,11 +455,17 @@
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
+                        <outlet property="addImage" destination="bov-V2-GoF" id="n6R-2a-h3C"/>
                         <outlet property="tableView" destination="bjt-Kh-lMt" id="zwO-4O-Wor"/>
                         <segue destination="ftv-iV-bHS" kind="show" identifier="goToSignIn" id="JTE-v3-ALA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sZS-vW-w91" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="ADr-VZ-3y3">
+                    <connections>
+                        <action selector="addImageNoteTapped:" destination="45e-dE-TeF" id="VFU-JD-51J"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="568.5" y="450.5"/>
         </scene>

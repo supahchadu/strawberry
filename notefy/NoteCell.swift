@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import Firebase
 class NoteCell: UITableViewCell {
    
     @IBOutlet weak var noteImg: UIImageView!
@@ -21,9 +21,29 @@ class NoteCell: UITableViewCell {
         
     }
     
-    func configureCell(notes: Note) {
+    func configureCell(notes: Note, img: UIImage? = nil) {
         self.note = notes
         self.noteCaption.text = note.caption
         self.noteLikes.text = "\(note.likes)"
+        
+        if img != nil {
+            self.noteImg.image = img
+        } else {
+            let ref = FIRStorage.storage().referenceForURL(note.imageUrl)
+            ref.dataWithMaxSize(2 * 1024 * 1024, completion: {(data, error) in
+                if error != nil {
+                    print("Unable to download image on firebase storage")
+                } else {
+                    print("Successful download on firebase storage")
+                    if let imgData = data {
+                        if let img = UIImage(data: imgData){
+                            self.noteImg.image = img
+                            NoteFeed.imageCache.setObject(img, forKey: self.note.imageUrl)
+                        }
+                    }
+                }
+            })
+            
+        }
     }
 }
