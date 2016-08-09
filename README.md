@@ -1,5 +1,15 @@
-## If you want to contribute, feel free to email me.
-* Contributions are well appreciated and could be of help.
-* Download the files with permision, Thank you :)
+## IOS Application focused on version 9.x.x -> Upgrading when IOS 10.x.x launched
+Demonstrates GPS Geolocation finding and use of real-time servers to manipulate data.
+
+# Libraries and Dependencies used:
+* Cocoapods 1.x.x
+* Ruby 3.2
+* XCode 7.3 -> Beta 4
+* Firebase (database, storage, auth, testlabs)
+* Geofire (geolocation)
+* Pods
+* Swift 3
+* Object-C
+* Facebook-SDK
 
 - RDD
