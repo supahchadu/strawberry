@@ -215,11 +215,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "notefy/NoteFeed.swift"
-            timestampString = "492397555.462127"
+            timestampString = "492406414.651088"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "34"
-            endingLineNumber = "34"
+            startingLineNumber = "39"
+            endingLineNumber = "39"
             landmarkName = "tableView(_:cellForRowAtIndexPath:)"
             landmarkType = "5">
          </BreakpointContent>

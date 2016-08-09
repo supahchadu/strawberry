@@ -20,6 +20,11 @@ class NoteFeed: UIViewController, UITableViewDelegate, UITableViewDataSource {
         tableView.delegate = self
         tableView.dataSource = self
         
+        // Observe a live changing data from the database
+        DatabaseService.databaseService.REF_NOTES.observeEventType(.Value, withBlock: { (snapshot) in
+            print(snapshot.value)
+        })
+        
     }
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
