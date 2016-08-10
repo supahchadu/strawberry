@@ -9,6 +9,7 @@
 
 import Foundation
 import Firebase
+import SwiftKeychainWrapper
 
 // Global Referrence that contains the database URL
 // Becareful not for stealing or hacking or anything.
@@ -40,6 +41,12 @@ class DatabaseService {
     
     var REF_IMAGES: FIRStorageReference {
         return _REF_NOTES_IMAGES
+    }
+    
+    var REF_USER_CURRENT: FIRDatabaseReference {
+        let uid = KeychainWrapper.stringForKey(KEY_UID)
+        let user = REF_USERS.child(uid!)
+        return user
     }
     
     // Handling Users created (equal) to the User being Authenticated

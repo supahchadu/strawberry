@@ -58,6 +58,7 @@ class NoteFeed: UIViewController, UITableViewDelegate, UITableViewDataSource, UI
         
     }
     
+    // --------------------- TABLE VIEW --------------------------------
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
     }
@@ -69,20 +70,21 @@ class NoteFeed: UIViewController, UITableViewDelegate, UITableViewDataSource, UI
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let note = notes[indexPath.row]
+    
         if let cell = tableView.dequeueReusableCellWithIdentifier("NoteCell") as? NoteCell {
             
             if let imgs = NoteFeed.imageCache.objectForKey(note.imageUrl) {
                 cell.configureCell(note, img: imgs as? UIImage)
-                return cell
             }else {
                 cell.configureCell(note, img: nil)
-                return cell
             }
+            return cell
         } else {
     
             return NoteCell()
         }
     }
+    //---------------------- TABLE VIEW -----------------------------
 
     // For choosing image via Galleria in iPhones
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
@@ -94,6 +96,23 @@ class NoteFeed: UIViewController, UITableViewDelegate, UITableViewDataSource, UI
             print("Invalid Image selected")
         }
         imagePicker.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    func postToFirebase(urls: String){
+        let post: Dictionary<String, AnyObject> = [
+            "caption": noteMessageField.text!,
+            "imageUrl": urls,
+            "likes": 0
+        ]
+        
+        let firebasePost = DatabaseService.databaseService.REF_NOTES.childByAutoId()
+        firebasePost.setValue(post)
+        // Setting back the defaults after pushing the datas to firebase
+        noteMessageField.text = ""
+        imageSelected = false
+        addImage.image = UIImage(named: "add-image")
+        
+        tableView.reloadData()
     }
     
     override func didReceiveMemoryWarning() {
@@ -118,14 +137,14 @@ class NoteFeed: UIViewController, UITableViewDelegate, UITableViewDataSource, UI
         }
         
         // We need at least an image!
-        guard let img = addImage.image where imageSelected == true else {
+        guard let ig = addImage.image where imageSelected == true else {
             print("No Immage is selected")
             return
         }
         
         // Uploading image via JPEG format and tone it down for fast cache
         // and fast storage and upload! No Massive data please~
-        if let imgData = UIImageJPEGRepresentation(img, 0.2){
+        if let imgData = UIImageJPEGRepresentation(ig, 0.2){
             
             // We create a unique Identifier for the image to be uploaded
             let imgUid = NSUUID().UUIDString
@@ -141,15 +160,13 @@ class NoteFeed: UIViewController, UITableViewDelegate, UITableViewDataSource, UI
                     print("Successfully uploaded image to the database storage")
                     // Now for the posting purposes,  we need the URL to store and post for our feed.
                     let downloadURL = metadata?.downloadURL()?.absoluteString
-                    
+                    if let url = downloadURL {
+                        self.postToFirebase(url)
+                    }
                 }
             })
             
         }
-        
-        
-        
-        
     }
     
     @IBAction func signOutButton(sender: AnyObject) {

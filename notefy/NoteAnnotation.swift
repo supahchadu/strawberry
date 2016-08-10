@@ -9,7 +9,7 @@
 import Foundation
 
 let typeNotes = [
-    "Love"
+    "Note"
 ]
 
 class NoteAnnotation : NSObject, MKAnnotation {
