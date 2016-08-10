@@ -118,7 +118,7 @@ class MapNotes: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
     // Whenever the user go, show the notes on the map in the place <3
     func showNotesOnMap(location: CLLocation){
         let geoFire = GeoFire(firebaseRef: DatabaseService.databaseService.REF_NOTES)
-        
+        NoteFeed.arrayKeys.removeAll()
         let circleQuery = geoFire!.queryAtLocation(location, withRadius: 0.5)
         _ = circleQuery?.observeEventType(GFEventType.KeyEntered, withBlock: {(key, location) in
             if let key = key, let location = location {

@@ -56,12 +56,12 @@ class NoteFeed: UIViewController, UITableViewDelegate, UITableViewDataSource, UI
         locationAuthStatus()
         
 // TESTING CAPSULE ----------------->
-        geoFire = GeoFire(firebaseRef: DatabaseService.databaseService.REF_NOTES)
+        //geoFire = GeoFire(firebaseRef: DatabaseService.databaseService.REF_NOTES)
         
-        let circleQuery = geoFire!.queryAtLocation(locationManager.location, withRadius: 0.5)
-        _ = circleQuery?.observeEventType(GFEventType.KeyEntered, withBlock: { (key, location) in
-            if let key = key, let location = location  {
-                print("HELLO: \(key)")
+        //let circleQuery = geoFire!.queryAtLocation(locationManager.location, withRadius: 0.5)
+        //_ = circleQuery?.observeEventType(GFEventType.KeyEntered, withBlock: { (key, location) in
+           // if let key = key, let location = location  {
+               // print("HELLO: \(key)")
                 //self.arrayKeys.append(key)
                 //print("\(self.arrayKeys)")
                /*
@@ -87,12 +87,13 @@ class NoteFeed: UIViewController, UITableViewDelegate, UITableViewDataSource, UI
                 })*/
                 
                 //self.tableView.reloadData()
-            }
-        })
+           // }
+       // })
         
             DatabaseService.databaseService.REF_NOTES.observeEventType(.Value, withBlock: { (snapshot) in
                 
                 if let snapshots = snapshot.children.allObjects as? [FIRDataSnapshot] {
+                    self.notes.removeAll()
                     for snap in snapshots {
                         print("SNAP: ----------> \(snap)")
                         for childKey in NoteFeed.arrayKeys {
@@ -101,7 +102,7 @@ class NoteFeed: UIViewController, UITableViewDelegate, UITableViewDataSource, UI
                                     let key = snap.key
                                     let note = Note(noteKey: key, noteData: noteDict)
                                     self.notes.append(note)
-                                    print("INSIDE: -------> \(self.notes[0].caption)")
+                                    print("INSIDE: -------> \(childKey)")
                                 }
                             }
                         }
@@ -113,6 +114,10 @@ class NoteFeed: UIViewController, UITableViewDelegate, UITableViewDataSource, UI
             })
     }
     
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        self.tableView.reloadData()
+    }
 
     /*func refreshNotesOnFeed() {
         for childKey in NoteFeed.arrayKeys {
@@ -164,18 +169,16 @@ class NoteFeed: UIViewController, UITableViewDelegate, UITableViewDataSource, UI
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let note = notes[indexPath.row]
     
-        if let cell = tableView.dequeueReusableCellWithIdentifier("NoteCell") as? NoteCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier("NoteCell") as! NoteCell
             
-            if let imgs = NoteFeed.imageCache.objectForKey(note.imageUrl) {
+        if let imgs = NoteFeed.imageCache.objectForKey(note.imageUrl) {
                 cell.configureCell(note, img: imgs as? UIImage)
-            }else {
-                cell.configureCell(note, img: nil)
-            }
-            return cell
+            
         } else {
-    
-            return NoteCell()
+                cell.configureCell(note, img: nil)
+            
         }
+        return cell
     }
     //---------------------- TABLE VIEW -----------------------------
 
@@ -206,13 +209,13 @@ class NoteFeed: UIViewController, UITableViewDelegate, UITableViewDataSource, UI
     
         let firebasePost = DatabaseService.databaseService.REF_NOTES.child(postUid)
         firebasePost.updateChildValues(post)
-        
+        NoteFeed.arrayKeys.append(postUid)
         // Setting back the defaults after pushing the datas to firebase
         noteMessageField.text = ""
         imageSelected = false
         addImage.image = UIImage(named: "add-image")
         
-        tableView.reloadData()
+        //tableView.reloadData()
     }
     
     override func didReceiveMemoryWarning() {

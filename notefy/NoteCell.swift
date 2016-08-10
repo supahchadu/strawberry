@@ -32,8 +32,9 @@ class NoteCell: UITableViewCell {
     
     func configureCell(notes: Note, img: UIImage? = nil) {
         self.note = notes
-        likesRef = DatabaseService.databaseService.REF_USER_CURRENT.child("likes").child(notes.noteKey)
         self.noteCaption.text = note.caption
+        
+        likesRef = DatabaseService.databaseService.REF_USER_CURRENT.child("likes").child(notes.noteKey)
         self.noteLikes.text = "\(note.likes)"
         
         if img != nil {
@@ -53,12 +54,11 @@ class NoteCell: UITableViewCell {
                     }
                 }
             })
-            
         }
         // Check if the current user like the post.
         
-        likesRef.observeSingleEventOfType(.Value, withBlock: { (snapshot) in
-            if let _ = snapshot.value as? NSNull {
+        likesRef.observeSingleEventOfType(.Value, withBlock: { snapshot in
+            if snapshot.value is NSNull {
                 self.noteLikeImage.image = UIImage(named: "1")
             } else {
                 self.noteLikeImage.image = UIImage(named: "2")
@@ -70,7 +70,7 @@ class NoteCell: UITableViewCell {
     func likeTapped(sender: UITapGestureRecognizer) {
        
         likesRef.observeSingleEventOfType(.Value, withBlock: { (snapshot) in
-            if let _ = snapshot.value as? NSNull {
+            if snapshot.value is NSNull {
                 self.noteLikeImage.image = UIImage(named: "1")
                 self.note.adjustLikes(true)
                 self.likesRef.setValue(true)
