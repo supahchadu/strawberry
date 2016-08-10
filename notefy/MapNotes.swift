@@ -117,11 +117,15 @@ class MapNotes: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
     
     // Whenever the user go, show the notes on the map in the place <3
     func showNotesOnMap(location: CLLocation){
+        let geoFire = GeoFire(firebaseRef: DatabaseService.databaseService.REF_NOTES)
+        
         let circleQuery = geoFire!.queryAtLocation(location, withRadius: 0.5)
         _ = circleQuery?.observeEventType(GFEventType.KeyEntered, withBlock: {(key, location) in
             if let key = key, let location = location {
-                let anno = NoteAnnotation(coordinate: location.coordinate, noteNumber: Int(key)!)
+                let anno = NoteAnnotation(coordinate: location.coordinate, noteNumber: Int("1")!)
+                print("\(key)")
                 self.mapView.addAnnotation(anno)
+                NoteFeed.arrayKeys.append(key)
                 
             }
         
@@ -178,12 +182,14 @@ class MapNotes: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
     // Function pass the location to the database with the notes to be created there.
     func createNoteLocation(forLocation location: CLLocation, hasNote noteId: Int){
         geoFire.setLocation(location, forKey: "\(noteId)")
+    
     }
     
     @IBAction func addRandomNotes(sender: AnyObject) {
         
-        let loc = CLLocation(latitude: mapView.centerCoordinate.latitude, longitude: mapView.centerCoordinate.longitude)
-        createNoteLocation(forLocation: loc, hasNote: Int(1))
+        //let loc = CLLocation(latitude: mapView.centerCoordinate.latitude, longitude: mapView.centerCoordinate.longitude)
+        //createNoteLocation(forLocation: loc, hasNote: Int(1))
+        performSegueWithIdentifier("gotoNoteFeeds", sender: nil)
     }
 
 }

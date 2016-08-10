@@ -7,20 +7,28 @@
 //
 
 import UIKit
+import MapKit
 import Firebase
 import SwiftKeychainWrapper
 
 class NoteFeed: UIViewController, UITableViewDelegate, UITableViewDataSource, UIImagePickerControllerDelegate,
-    UINavigationControllerDelegate {
+    UINavigationControllerDelegate, CLLocationManagerDelegate {
 
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var addImage: cameraDesignViewSmoothRect!
     @IBOutlet weak var noteMessageField: PasswordDesignView!
     
+    var locationManager: CLLocationManager!
+    var geoFire: GeoFire!
+    var geoFireRef: FIRDatabaseReference!
+    static var arrayKeys = [String]()
     var notes = [Note]()
     var imagePicker: UIImagePickerController!
-    
+    var caption: String!
+    var imageURL: String!
+    var likes: Int!
+    var noteKey: String!
     // Global Cache in phones image
     static var imageCache: NSCache = NSCache()
     
@@ -29,35 +37,120 @@ class NoteFeed: UIViewController, UITableViewDelegate, UITableViewDataSource, UI
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         tableView.delegate = self
         tableView.dataSource = self
+        locationManager = CLLocationManager()
+        locationManager.delegate = self
+    
         
         // initializing our image pick and edit photo
         imagePicker = UIImagePickerController()
         imagePicker.allowsEditing = true
         imagePicker.delegate = self
+        geoFireRef = FIRDatabase.database().reference()
+        //geoFire = GeoFire(firebaseRef: geoFireRef)
         
         // Observe a live changing data from the database
-        DatabaseService.databaseService.REF_NOTES.observeEventType(.Value, withBlock: { (snapshot) in
-            
-            if let snapshots = snapshot.children.allObjects as? [FIRDataSnapshot] {
-                for snap in snapshots {
-                    print("SNAP: \(snap)")
+        // Retrieving DATA ACCORDING TO LOCATION -------->
+        locationAuthStatus()
+        
+// TESTING CAPSULE ----------------->
+        geoFire = GeoFire(firebaseRef: DatabaseService.databaseService.REF_NOTES)
+        
+        let circleQuery = geoFire!.queryAtLocation(locationManager.location, withRadius: 0.5)
+        _ = circleQuery?.observeEventType(GFEventType.KeyEntered, withBlock: { (key, location) in
+            if let key = key, let location = location  {
+                print("HELLO: \(key)")
+                //self.arrayKeys.append(key)
+                //print("\(self.arrayKeys)")
+               /*
+               DatabaseService.databaseService.REF_NOTES.child(key).observeSingleEventOfType(.Value, withBlock: { (snapshot) in
+                    print("SNAP: --------> \(snapshot)")
                     
-                    if let noteDict = snap.value as? Dictionary<String, AnyObject> {
-                        let key = snap.key
-                        let note = Note(noteKey: key, noteData: noteDict)
-                        self.notes.append(note)
+                    if let noteCaption = snapshot.value?.objectForKey("caption") as? String {
+                        self.caption = noteCaption
                     }
-                }
+                    if let noteImageUrl = snapshot.value?.objectForKey("imageUrl") as? String {
+                        self.imageURL = noteImageUrl
+                    }
+                    if let noteLikes = snapshot.value?.objectForKey("likes") as? Int {
+                        self.likes = noteLikes
+                    }
+                    
+                    let note = Note(noteKey: key, caption: self.caption, imageUrl: self.imageURL,likes: self.likes,location: location)
+                    print("NOTE:----------->\(self.caption)\(self.imageURL)\(self.likes)")
+                    
+                    self.notes.append(note)
+                print("NOTE CONTENTS: \(self.notes)")
+                self.tableView.reloadData()
+                })*/
+                
+                //self.tableView.reloadData()
             }
-            self.tableView.reloadData()
         })
         
-        
-        
+            DatabaseService.databaseService.REF_NOTES.observeEventType(.Value, withBlock: { (snapshot) in
+                
+                if let snapshots = snapshot.children.allObjects as? [FIRDataSnapshot] {
+                    for snap in snapshots {
+                        print("SNAP: ----------> \(snap)")
+                        for childKey in NoteFeed.arrayKeys {
+                            if childKey == snap.key {
+                                if let noteDict = snap.value as? Dictionary<String, AnyObject> {
+                                    let key = snap.key
+                                    let note = Note(noteKey: key, noteData: noteDict)
+                                    self.notes.append(note)
+                                    print("INSIDE: -------> \(self.notes[0].caption)")
+                                }
+                            }
+                        }
+                       // self.tableView.reloadData()
+                    }
+                    //self.tableView.reloadData()
+                }
+                self.tableView.reloadData()
+            })
     }
     
+
+    /*func refreshNotesOnFeed() {
+        for childKey in NoteFeed.arrayKeys {
+            DatabaseService.databaseService.REF_NOTES.child(childKey).observeEventType(.Value, withBlock: { (snapshot) in
+                
+                
+                
+                if let noteCaption = snapshot.value?.objectForKey("caption") as? String {
+                    self.caption = noteCaption
+                }
+                if let noteImageUrl = snapshot.value?.objectForKey("imageUrl") as? String {
+                    self.imageURL = noteImageUrl
+                }
+                if let noteLikes = snapshot.value?.objectForKey("likes") as? Int {
+                    self.likes = noteLikes
+                }
+                
+                let note = Note(noteKey: childKey, caption: self.caption, imageUrl: self.imageURL,likes: self.likes)
+                print("NOTE:----------->\(self.caption)\(self.imageURL)\(self.likes)")
+                
+                self.notes.append(note)
+                print("NOTE CONTENTS: \(self.notes)")
+            })
+            self.tableView.reloadData()
+
+    }*/
+    // ------------- LOCATION -------------
+    func locationAuthStatus() {
+        // Ask for the authorization for Google Location
+        if CLLocationManager.authorizationStatus() == .AuthorizedWhenInUse {
+            locationManager.startUpdatingLocation()
+        } else { //else if they dont, then request it otherwise again.
+            locationManager.requestWhenInUseAuthorization()
+        }
+    }
+    
+
+    // ------------- LOCATION ---------------
     // --------------------- TABLE VIEW --------------------------------
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
@@ -99,14 +192,21 @@ class NoteFeed: UIViewController, UITableViewDelegate, UITableViewDataSource, UI
     }
     
     func postToFirebase(urls: String){
+        
+        let postUid = NSUUID().UUIDString
+        geoFire = GeoFire(firebaseRef: DatabaseService.databaseService.REF_NOTES)
+        geoFire.setLocation(locationManager.location, forKey: postUid)
+        print("CHAD: LOCATION = \(locationManager.location)")
+        
         let post: Dictionary<String, AnyObject> = [
             "caption": noteMessageField.text!,
             "imageUrl": urls,
-            "likes": 0
+            "likes": 0,
         ]
+    
+        let firebasePost = DatabaseService.databaseService.REF_NOTES.child(postUid)
+        firebasePost.updateChildValues(post)
         
-        let firebasePost = DatabaseService.databaseService.REF_NOTES.childByAutoId()
-        firebasePost.setValue(post)
         // Setting back the defaults after pushing the datas to firebase
         noteMessageField.text = ""
         imageSelected = false

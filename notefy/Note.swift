@@ -37,8 +37,12 @@ class Note {
         return _location
     }
     
-    init(caption: String, imageUrl: String, likes: Int, location: CLLocation){
-        
+    init(noteKey: String, caption: String, imageUrl: String, likes: Int){
+        self._noteKey = noteKey
+        self._caption = caption
+        self._imageUrl = imageUrl
+        self._likes = likes
+        _postRef = DatabaseService.databaseService.REF_NOTES.child(_noteKey)
     }
     
     init(noteKey: String, noteData: Dictionary<String, AnyObject>){
