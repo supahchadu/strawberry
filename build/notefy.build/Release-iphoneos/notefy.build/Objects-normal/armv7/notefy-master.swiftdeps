@@ -1,0 +1,18 @@
+version: "Apple Swift version 2.2 (swiftlang-703.0.18.8 clang-703.0.31)"
+options: "cfca9fb7783b41abaa8e70b3cd50f5e2"
+build_time: [524219123, 227449000]
+inputs:
+  "/Users/chad-mac/Desktop/git-sagigilid/notefy/notefy/DatabaseService.swift": !dirty [524196857, 0]
+  "/Users/chad-mac/Desktop/git-sagigilid/notefy/notefy/FacebookButtonDesignView.swift": !dirty [523997254, 0]
+  "/Users/chad-mac/Desktop/git-sagigilid/notefy/notefy/NoteAnnotation.swift": !dirty [524207351, 0]
+  "/Users/chad-mac/Desktop/git-sagigilid/notefy/notefy/cameraDesignViewSmoothRect.swift": !dirty [524015905, 0]
+  "/Users/chad-mac/Desktop/git-sagigilid/notefy/notefy/NoteCell.swift": !dirty [524198445, 0]
+  "/Users/chad-mac/Desktop/git-sagigilid/notefy/notefy/Constants.swift": !dirty [524198224, 0]
+  "/Users/chad-mac/Desktop/git-sagigilid/notefy/notefy/DesignView.swift": !dirty [524012479, 0]
+  "/Users/chad-mac/Desktop/git-sagigilid/notefy/notefy/SignInVC.swift": !dirty [524208840, 0]
+  "/Users/chad-mac/Desktop/git-sagigilid/notefy/notefy/Note.swift": !dirty [524194393, 0]
+  "/Users/chad-mac/Desktop/git-sagigilid/notefy/notefy/MapNotes.swift": !dirty [524208066, 0]
+  "/Users/chad-mac/Desktop/git-sagigilid/notefy/notefy/PasswordDesignView.swift": !dirty [523998118, 0]
+  "/Users/chad-mac/Desktop/git-sagigilid/notefy/notefy/SignInDesignViewBTN.swift": !dirty [523997930, 0]
+  "/Users/chad-mac/Desktop/git-sagigilid/notefy/notefy/AppDelegate.swift": !dirty [523999740, 0]
+  "/Users/chad-mac/Desktop/git-sagigilid/notefy/notefy/NoteFeed.swift": !dirty [524208992, 0]

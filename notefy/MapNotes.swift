@@ -24,7 +24,7 @@ class MapNotes: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
     var geoFire: GeoFire!   // Fore Firebase Geolocation
     
     var geoFireRef: FIRDatabaseReference!
-    
+    var userNotesInventory: FIRDatabaseReference!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,6 +35,21 @@ class MapNotes: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
         // Firebase Database reference to the actual database
         geoFireRef = FIRDatabase.database().reference()
         geoFire = GeoFire(firebaseRef: geoFireRef)
+        
+        DatabaseService.databaseService.REF_USER_CURRENT.child("NotesAdded").observeEventType(.Value, withBlock: { (snapshot) in
+            
+            if let snapshots = snapshot.children.allObjects as? [FIRDataSnapshot] {
+                NoteFeed.arrayKeys.removeAll()
+                for snap in snapshots {
+                    print("ADDED NOTES ID: ----------> \(snap)")
+                    NoteFeed.arrayKeys.append(snap.key)
+                }
+               
+            }
+            
+        })
+
+        
         locationAuthStatus()
         
     }
@@ -98,6 +113,8 @@ class MapNotes: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
         if let annotationView = annotationView, let anno = annotation as? NoteAnnotation {
             annotationView.canShowCallout = true;
             annotationView.image = UIImage(named: "\(anno.noteNumber)")
+            annotationView.contentMode = .ScaleAspectFit
+            
             
             let btn = UIButton()
             btn.frame = CGRect(x: 0, y: 0, width: 30, height: 30)
@@ -118,14 +135,16 @@ class MapNotes: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
     // Whenever the user go, show the notes on the map in the place <3
     func showNotesOnMap(location: CLLocation){
         let geoFire = GeoFire(firebaseRef: DatabaseService.databaseService.REF_NOTES)
-        NoteFeed.arrayKeys.removeAll()
+        //NoteFeed.arrayKeys.removeAll()
         let circleQuery = geoFire!.queryAtLocation(location, withRadius: 0.5)
         _ = circleQuery?.observeEventType(GFEventType.KeyEntered, withBlock: {(key, location) in
             if let key = key, let location = location {
-                let anno = NoteAnnotation(coordinate: location.coordinate, noteNumber: Int("1")!)
+                let anno = NoteAnnotation(coordinate: location.coordinate, noteNumber: Int("5")!, noteKey: key)
                 print("\(key)")
-                self.mapView.addAnnotation(anno)
-                NoteFeed.arrayKeys.append(key)
+                if !NoteFeed.arrayKeys.contains(key){
+                    self.mapView.addAnnotation(anno)
+                }
+                //NoteFeed.arrayKeys.append(key)
                 
             }
         
@@ -159,21 +178,15 @@ class MapNotes: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
         } else {
             // Adding the notes to our feed!
             let anno = view.annotation as? NoteAnnotation
-            let toastLabel = UILabel(frame: CGRectMake(self.view.frame.size.width/2 - 150, self.view.frame.size.height-100, 300, 35))
-            toastLabel.backgroundColor = UIColor.blackColor()
-            toastLabel.textColor = UIColor.whiteColor()
-            toastLabel.textAlignment = NSTextAlignment.Center;
-            self.view.addSubview(toastLabel)
-            toastLabel.text = "Succesfully added note!"
-            toastLabel.alpha = 1.0
-            toastLabel.layer.cornerRadius = 10
-            toastLabel.clipsToBounds  =  true
-            UIView.animateWithDuration(4.0, delay: 0.1, options: UIViewAnimationOptions.CurveEaseOut, animations: {
-                
-                toastLabel.alpha = 0.0
-                
-            }, completion: nil)
             
+            // ----------- JUST A HECK OF A LOT OF CODE FOR A TOAST ZZzZzzZz --------
+            messageToast("Note has been successfully added.", view: self.view)
+            // ----------- < END OF TOAST > ---------
+            
+            // Adding notes on Firebase Database
+            userNotesInventory = DatabaseService.databaseService.REF_USER_CURRENT.child("NotesAdded").child((anno?.noteKey)!)
+            userNotesInventory.setValue(true)
+            NoteFeed.arrayKeys.append((anno?.noteKey)!)
             self.mapView.removeAnnotation(anno!)
         
         }

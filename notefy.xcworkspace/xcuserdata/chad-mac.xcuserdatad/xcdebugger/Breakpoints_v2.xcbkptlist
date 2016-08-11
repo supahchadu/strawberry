@@ -10,12 +10,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "notefy/NoteAnnotation.swift"
-            timestampString = "492460554.725126"
+            timestampString = "492568556.087175"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "24"
-            endingLineNumber = "24"
-            landmarkName = "init(coordinate:noteNumber:)"
+            startingLineNumber = "25"
+            endingLineNumber = "25"
+            landmarkName = "init(coordinate:noteNumber:noteKey:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -120,7 +120,7 @@
                   moduleName = "notefy"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/chad-mac/Desktop/git-sagigilid/notefy/notefy/DesignView.swift"
-                  timestampString = "492564390.246546"
+                  timestampString = "492576057.318094"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "0"
@@ -135,7 +135,7 @@
                   moduleName = "notefy"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/chad-mac/Desktop/git-sagigilid/notefy/notefy/DesignView.swift"
-                  timestampString = "492564390.246686"
+                  timestampString = "492576057.318268"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "11"
@@ -150,7 +150,7 @@
                   moduleName = "notefy"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/chad-mac/Desktop/git-sagigilid/notefy/notefy/DesignView.swift"
-                  timestampString = "492564390.246789"
+                  timestampString = "492576057.318368"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "11"
@@ -183,11 +183,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "notefy/SignInVC.swift"
-            timestampString = "492464744.309198"
+            timestampString = "492586468.125986"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "51"
-            endingLineNumber = "51"
+            startingLineNumber = "55"
+            endingLineNumber = "55"
             landmarkName = "facebookButtonSignInButtonPressed(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -199,11 +199,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "notefy/SignInVC.swift"
-            timestampString = "492464744.309198"
+            timestampString = "492586468.125986"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "81"
-            endingLineNumber = "81"
+            startingLineNumber = "85"
+            endingLineNumber = "85"
             landmarkName = "firebaseAuthentication(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -215,11 +215,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "notefy/SignInVC.swift"
-            timestampString = "492464744.309198"
+            timestampString = "492586468.125986"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "128"
-            endingLineNumber = "128"
+            startingLineNumber = "127"
+            endingLineNumber = "127"
             landmarkName = "completeSignIn(_:userData:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -263,7 +263,7 @@
                   moduleName = "notefy"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/chad-mac/Desktop/git-sagigilid/notefy/notefy/NoteFeed.swift"
-                  timestampString = "492564390.24928"
+                  timestampString = "492576057.321147"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "36"
@@ -278,7 +278,7 @@
                   moduleName = "notefy"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/chad-mac/Desktop/git-sagigilid/notefy/notefy/NoteFeed.swift"
-                  timestampString = "492564390.249422"
+                  timestampString = "492576057.32126"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "36"
@@ -293,7 +293,7 @@
                   moduleName = "notefy"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/chad-mac/Desktop/git-sagigilid/notefy/notefy/NoteFeed.swift"
-                  timestampString = "492564390.249516"
+                  timestampString = "492576057.321379"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "36"
@@ -308,7 +308,7 @@
                   moduleName = "notefy"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/chad-mac/Desktop/git-sagigilid/notefy/notefy/NoteFeed.swift"
-                  timestampString = "492564390.249606"
+                  timestampString = "492576057.321562"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "36"
@@ -357,11 +357,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "notefy/NoteFeed.swift"
-            timestampString = "492564389.069678"
+            timestampString = "492586628.331594"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "172"
-            endingLineNumber = "172"
+            startingLineNumber = "155"
+            endingLineNumber = "155"
             landmarkName = "tableView(_:cellForRowAtIndexPath:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -373,11 +373,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "notefy/NoteFeed.swift"
-            timestampString = "492564389.069678"
+            timestampString = "492586628.331594"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "175"
-            endingLineNumber = "175"
+            startingLineNumber = "158"
+            endingLineNumber = "158"
             landmarkName = "tableView(_:cellForRowAtIndexPath:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -389,11 +389,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "notefy/NoteFeed.swift"
-            timestampString = "492564389.069678"
+            timestampString = "492586628.331594"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "182"
-            endingLineNumber = "182"
+            startingLineNumber = "168"
+            endingLineNumber = "168"
             landmarkName = "tableView(_:cellForRowAtIndexPath:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -405,13 +405,45 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "notefy/NoteFeed.swift"
-            timestampString = "492564389.069678"
+            timestampString = "492586628.331594"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "260"
-            endingLineNumber = "260"
+            startingLineNumber = "269"
+            endingLineNumber = "269"
             landmarkName = "postNoteOnMapTapped(_:)"
             landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "notefy.NoteFeed.postNoteOnMapTapped (Swift.AnyObject) -&gt; ()"
+                  moduleName = "notefy"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/chad-mac/Desktop/git-sagigilid/notefy/notefy/NoteFeed.swift"
+                  timestampString = "492576057.324252"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "266"
+                  endingLineNumber = "266"
+                  offsetFromSymbolStart = "1354">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "notefy.NoteFeed.(postNoteOnMapTapped (Swift.AnyObject) -&gt; ()).(closure #1)"
+                  moduleName = "notefy"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/chad-mac/Desktop/git-sagigilid/notefy/notefy/NoteFeed.swift"
+                  timestampString = "492576057.32439"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "267"
+                  endingLineNumber = "267"
+                  offsetFromSymbolStart = "23">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -421,11 +453,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "notefy/NoteFeed.swift"
-            timestampString = "492564389.069678"
+            timestampString = "492586628.331594"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "243"
-            endingLineNumber = "243"
+            startingLineNumber = "251"
+            endingLineNumber = "251"
             landmarkName = "postNoteOnMapTapped(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -437,11 +469,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "notefy/NoteFeed.swift"
-            timestampString = "492564389.069678"
+            timestampString = "492586628.331594"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "266"
-            endingLineNumber = "266"
+            startingLineNumber = "275"
+            endingLineNumber = "275"
             landmarkName = "postNoteOnMapTapped(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -453,11 +485,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "notefy/NoteFeed.swift"
-            timestampString = "492564389.069678"
+            timestampString = "492586628.331594"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "218"
-            endingLineNumber = "218"
+            startingLineNumber = "203"
+            endingLineNumber = "203"
             landmarkName = "postToFirebase(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -469,11 +501,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "notefy/NoteCell.swift"
-            timestampString = "492485500.24672"
+            timestampString = "492576056.133875"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "76"
-            endingLineNumber = "76"
+            startingLineNumber = "77"
+            endingLineNumber = "77"
             landmarkName = "likeTapped(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -501,11 +533,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "notefy/NoteFeed.swift"
-            timestampString = "492564389.069678"
+            timestampString = "492586628.331594"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "196"
-            endingLineNumber = "196"
+            startingLineNumber = "182"
+            endingLineNumber = "182"
             landmarkName = "NoteFeed"
             landmarkType = "3">
          </BreakpointContent>
@@ -517,11 +549,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "notefy/MapNotes.swift"
-            timestampString = "492491108.939968"
+            timestampString = "492585595.346776"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "120"
-            endingLineNumber = "120"
+            startingLineNumber = "137"
+            endingLineNumber = "137"
             landmarkName = "showNotesOnMap(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -532,268 +564,12 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "notefy/NoteFeed.swift"
-            timestampString = "492501098.037499"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "78"
-            endingLineNumber = "78"
-            landmarkName = "viewDidLoad()"
-            landmarkType = "5">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "notefy.NoteFeed.viewDidLoad () -&gt; ()"
-                  moduleName = "notefy"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/chad-mac/Desktop/git-sagigilid/notefy/notefy/NoteFeed.swift"
-                  timestampString = "492564390.259215"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "93"
-                  endingLineNumber = "93"
-                  offsetFromSymbolStart = "1353">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "notefy.NoteFeed.(viewDidLoad () -&gt; ()).(closure #1)"
-                  moduleName = "notefy"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/chad-mac/Desktop/git-sagigilid/notefy/notefy/NoteFeed.swift"
-                  timestampString = "492564390.259352"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "95"
-                  endingLineNumber = "95"
-                  offsetFromSymbolStart = "28">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "notefy/NoteFeed.swift"
-            timestampString = "492501098.037499"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "75"
-            endingLineNumber = "75"
-            landmarkName = "viewDidLoad()"
-            landmarkType = "5">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "notefy.NoteFeed.viewDidLoad () -&gt; ()"
-                  moduleName = "notefy"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/chad-mac/Desktop/git-sagigilid/notefy/notefy/NoteFeed.swift"
-                  timestampString = "492564390.260494"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "93"
-                  endingLineNumber = "93"
-                  offsetFromSymbolStart = "1353">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "notefy.NoteFeed.(viewDidLoad () -&gt; ()).(closure #1)"
-                  moduleName = "notefy"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/chad-mac/Desktop/git-sagigilid/notefy/notefy/NoteFeed.swift"
-                  timestampString = "492564390.260661"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "95"
-                  endingLineNumber = "95"
-                  offsetFromSymbolStart = "28">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "notefy/NoteFeed.swift"
-            timestampString = "492501098.037499"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "71"
-            endingLineNumber = "71"
-            landmarkName = "viewDidLoad()"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "notefy/NoteFeed.swift"
-            timestampString = "492502473.506847"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "84"
-            endingLineNumber = "84"
-            landmarkName = "viewDidLoad()"
-            landmarkType = "5">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "notefy.NoteFeed.viewDidLoad () -&gt; ()"
-                  moduleName = "notefy"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/chad-mac/Desktop/git-sagigilid/notefy/notefy/NoteFeed.swift"
-                  timestampString = "492564390.261938"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "93"
-                  endingLineNumber = "93"
-                  offsetFromSymbolStart = "1353">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "notefy.NoteFeed.(viewDidLoad () -&gt; ()).(closure #1)"
-                  moduleName = "notefy"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/chad-mac/Desktop/git-sagigilid/notefy/notefy/NoteFeed.swift"
-                  timestampString = "492564390.262071"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "95"
-                  endingLineNumber = "95"
-                  offsetFromSymbolStart = "28">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "notefy/NoteFeed.swift"
-            timestampString = "492501098.037499"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "81"
-            endingLineNumber = "81"
-            landmarkName = "viewDidLoad()"
-            landmarkType = "5">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "notefy.NoteFeed.viewDidLoad () -&gt; ()"
-                  moduleName = "notefy"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/chad-mac/Desktop/git-sagigilid/notefy/notefy/NoteFeed.swift"
-                  timestampString = "492564390.263483"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "93"
-                  endingLineNumber = "93"
-                  offsetFromSymbolStart = "1353">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "notefy.NoteFeed.(viewDidLoad () -&gt; ()).(closure #1)"
-                  moduleName = "notefy"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/chad-mac/Desktop/git-sagigilid/notefy/notefy/NoteFeed.swift"
-                  timestampString = "492564390.263654"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "95"
-                  endingLineNumber = "95"
-                  offsetFromSymbolStart = "28">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "notefy/NoteFeed.swift"
-            timestampString = "492502687.785757"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "91"
-            endingLineNumber = "91"
-            landmarkName = "viewDidLoad()"
-            landmarkType = "5">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "notefy.NoteFeed.viewDidLoad () -&gt; ()"
-                  moduleName = "notefy"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/chad-mac/Desktop/git-sagigilid/notefy/notefy/NoteFeed.swift"
-                  timestampString = "492564390.264918"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "93"
-                  endingLineNumber = "93"
-                  offsetFromSymbolStart = "1353">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "notefy.NoteFeed.(viewDidLoad () -&gt; ()).(closure #1)"
-                  moduleName = "notefy"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/chad-mac/Desktop/git-sagigilid/notefy/notefy/NoteFeed.swift"
-                  timestampString = "492564390.265055"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "95"
-                  endingLineNumber = "95"
-                  offsetFromSymbolStart = "28">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "notefy/MapNotes.swift"
-            timestampString = "492503184.39923"
+            timestampString = "492585595.346776"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "128"
-            endingLineNumber = "128"
+            startingLineNumber = "147"
+            endingLineNumber = "147"
             landmarkName = "showNotesOnMap(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -811,6 +587,54 @@
             startingLineNumber = "61"
             endingLineNumber = "61"
             landmarkName = "configureCell(_:img:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "notefy/MapNotes.swift"
+            timestampString = "492585595.346776"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "142"
+            endingLineNumber = "142"
+            landmarkName = "showNotesOnMap(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "notefy/NoteFeed.swift"
+            timestampString = "492586628.331594"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "146"
+            endingLineNumber = "146"
+            landmarkName = "tableView(_:cellForRowAtIndexPath:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "notefy/NoteFeed.swift"
+            timestampString = "492586628.331594"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "255"
+            endingLineNumber = "255"
+            landmarkName = "postNoteOnMapTapped(_:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

@@ -49,6 +49,7 @@ class DatabaseService {
         return user
     }
     
+    
     // Handling Users created (equal) to the User being Authenticated
     // Dictionary datastructure to get them.
     func createFirebaseDBUser(uid: String, userData: Dictionary<String, String>) {

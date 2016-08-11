@@ -1,0 +1,276 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "typeNotes"
+- "NoteAnnotation"
+provides-nominal:
+- "C6notefy14NoteAnnotation"
+provides-member:
+- ["C6notefy14NoteAnnotation", ""]
+provides-dynamic-lookup:
+- "noteType"
+- "noteKey"
+- "noteNumber"
+- "coordinate"
+- "title"
+depends-top-level:
+- "MKAnnotation"
+- "CLLocationCoordinate2D"
+- "typeNotes"
+- "Int"
+- "NSObject"
+- "Array"
+- "String"
+- "StringLiteralType"
+- "NoteAnnotation"
+depends-member:
+- ["Ps9AnyObject", "coordinate"]
+- ["Ps9AnyObject", "init"]
+- ["Ps9AnyObject", "noteKey"]
+- ["Ps9AnyObject", "noteNumber"]
+- ["Ps9AnyObject", "noteType"]
+- ["Ps9AnyObject", "subtitle"]
+- ["Ps9AnyObject", "title"]
+- !private ["Ps9AnyObject", "typeNotes"]
+- ["Ps9AnyObject", ""]
+- ["Sa", "Element"]
+- !private ["Sa", "Index"]
+- !private ["Sa", "deinit"]
+- !private ["Sa", "subscript"]
+- ["Ps23ArrayLiteralConvertible", "Element"]
+- !private ["Ps23ArrayLiteralConvertible", "Index"]
+- !private ["Ps23ArrayLiteralConvertible", "subscript"]
+- ["Ps11CVarArgType", "coordinate"]
+- ["Ps11CVarArgType", "init"]
+- ["Ps11CVarArgType", "noteKey"]
+- ["Ps11CVarArgType", "noteNumber"]
+- ["Ps11CVarArgType", "noteType"]
+- ["Ps11CVarArgType", "subtitle"]
+- ["Ps11CVarArgType", "title"]
+- !private ["Ps11CVarArgType", "typeNotes"]
+- ["Ps11CVarArgType", ""]
+- ["Ps14CollectionType", "Element"]
+- !private ["Ps14CollectionType", "Generator"]
+- !private ["Ps14CollectionType", "Index"]
+- !private ["Ps14CollectionType", "SubSequence"]
+- !private ["Ps14CollectionType", "_Element"]
+- !private ["Ps14CollectionType", "subscript"]
+- ["Ps28CustomDebugStringConvertible", "Element"]
+- !private ["Ps28CustomDebugStringConvertible", "Index"]
+- ["Ps28CustomDebugStringConvertible", "coordinate"]
+- ["Ps28CustomDebugStringConvertible", "init"]
+- ["Ps28CustomDebugStringConvertible", "noteKey"]
+- ["Ps28CustomDebugStringConvertible", "noteNumber"]
+- ["Ps28CustomDebugStringConvertible", "noteType"]
+- !private ["Ps28CustomDebugStringConvertible", "subscript"]
+- ["Ps28CustomDebugStringConvertible", "subtitle"]
+- ["Ps28CustomDebugStringConvertible", "title"]
+- !private ["Ps28CustomDebugStringConvertible", "typeNotes"]
+- ["Ps28CustomDebugStringConvertible", ""]
+- ["Ps23CustomStringConvertible", "Element"]
+- !private ["Ps23CustomStringConvertible", "Index"]
+- ["Ps23CustomStringConvertible", "coordinate"]
+- ["Ps23CustomStringConvertible", "init"]
+- ["Ps23CustomStringConvertible", "noteKey"]
+- ["Ps23CustomStringConvertible", "noteNumber"]
+- ["Ps23CustomStringConvertible", "noteType"]
+- !private ["Ps23CustomStringConvertible", "subscript"]
+- ["Ps23CustomStringConvertible", "subtitle"]
+- ["Ps23CustomStringConvertible", "title"]
+- !private ["Ps23CustomStringConvertible", "typeNotes"]
+- ["Ps23CustomStringConvertible", ""]
+- ["Ps9Equatable", "coordinate"]
+- ["Ps9Equatable", "init"]
+- ["Ps9Equatable", "noteKey"]
+- ["Ps9Equatable", "noteNumber"]
+- ["Ps9Equatable", "noteType"]
+- ["Ps9Equatable", "subtitle"]
+- ["Ps9Equatable", "title"]
+- !private ["Ps9Equatable", "typeNotes"]
+- ["Ps9Equatable", ""]
+- !private ["Ps13GeneratorType", "Element"]
+- ["Ps8Hashable", "coordinate"]
+- ["Ps8Hashable", "init"]
+- ["Ps8Hashable", "noteKey"]
+- ["Ps8Hashable", "noteNumber"]
+- ["Ps8Hashable", "noteType"]
+- ["Ps8Hashable", "subtitle"]
+- ["Ps8Hashable", "title"]
+- !private ["Ps8Hashable", "typeNotes"]
+- ["Ps8Hashable", ""]
+- ["Ps9Indexable", "Element"]
+- !private ["Ps9Indexable", "Generator"]
+- !private ["Ps9Indexable", "Index"]
+- !private ["Ps9Indexable", "SubSequence"]
+- !private ["Ps9Indexable", "_Element"]
+- !private ["Ps9Indexable", "subscript"]
+- !private ["Vs17IndexingGenerator", "Element"]
+- ["PSo12MKAnnotation", "coordinate"]
+- !private ["PSo12MKAnnotation", "noteKey"]
+- !private ["PSo12MKAnnotation", "noteNumber"]
+- !private ["PSo12MKAnnotation", "noteType"]
+- ["PSo12MKAnnotation", "subtitle"]
+- ["PSo12MKAnnotation", "title"]
+- !private ["PSo12MKAnnotation", "typeNotes"]
+- ["PSo12MKAnnotation", ""]
+- ["Ps21MutableCollectionType", "Element"]
+- !private ["Ps21MutableCollectionType", "Index"]
+- !private ["Ps21MutableCollectionType", "subscript"]
+- ["Ps16MutableIndexable", "Element"]
+- !private ["Ps16MutableIndexable", "Index"]
+- !private ["Ps16MutableIndexable", "subscript"]
+- ["Ps16MutableSliceable", "Element"]
+- !private ["Ps16MutableSliceable", "Index"]
+- !private ["Ps16MutableSliceable", "subscript"]
+- ["CSo8NSObject", "CLLocationCoordinate2D"]
+- ["CSo8NSObject", "Int"]
+- ["CSo8NSObject", "String"]
+- ["CSo8NSObject", "coordinate"]
+- ["CSo8NSObject", "init"]
+- ["CSo8NSObject", "noteKey"]
+- ["CSo8NSObject", "noteNumber"]
+- ["CSo8NSObject", "noteType"]
+- ["CSo8NSObject", "subtitle"]
+- ["CSo8NSObject", "title"]
+- !private ["CSo8NSObject", "typeNotes"]
+- ["CSo8NSObject", ""]
+- ["PSo16NSObjectProtocol", "coordinate"]
+- ["PSo16NSObjectProtocol", "init"]
+- ["PSo16NSObjectProtocol", "noteKey"]
+- ["PSo16NSObjectProtocol", "noteNumber"]
+- ["PSo16NSObjectProtocol", "noteType"]
+- ["PSo16NSObjectProtocol", "subtitle"]
+- ["PSo16NSObjectProtocol", "title"]
+- !private ["PSo16NSObjectProtocol", "typeNotes"]
+- ["PSo16NSObjectProtocol", ""]
+- ["C6notefy14NoteAnnotation", "CLLocationCoordinate2D"]
+- ["C6notefy14NoteAnnotation", "Int"]
+- ["C6notefy14NoteAnnotation", "String"]
+- ["C6notefy14NoteAnnotation", "coordinate"]
+- ["C6notefy14NoteAnnotation", "deinit"]
+- ["C6notefy14NoteAnnotation", "init"]
+- ["C6notefy14NoteAnnotation", "noteKey"]
+- ["C6notefy14NoteAnnotation", "noteNumber"]
+- ["C6notefy14NoteAnnotation", "noteType"]
+- ["C6notefy14NoteAnnotation", "subtitle"]
+- ["C6notefy14NoteAnnotation", "title"]
+- !private ["C6notefy14NoteAnnotation", "typeNotes"]
+- ["Ps30RangeReplaceableCollectionType", "Element"]
+- !private ["Ps30RangeReplaceableCollectionType", "Index"]
+- !private ["Ps30RangeReplaceableCollectionType", "subscript"]
+- ["Ps12SequenceType", "Element"]
+- !private ["Ps12SequenceType", "Generator"]
+- !private ["Ps12SequenceType", "Index"]
+- !private ["Ps12SequenceType", "SubSequence"]
+- !private ["Ps12SequenceType", "_Element"]
+- !private ["Ps12SequenceType", "subscript"]
+- !private ["Vs5Slice", "Generator"]
+- !private ["Vs5Slice", "Index"]
+- !private ["Vs5Slice", "SubSequence"]
+- !private ["Vs5Slice", "_Element"]
+- !private ["Vs12StaticString", "deinit"]
+- ["Ps10_ArrayType", "Element"]
+- !private ["Ps10_ArrayType", "Index"]
+- !private ["Ps10_ArrayType", "subscript"]
+- ["Ps24_DestructorSafeContainer", "Element"]
+- !private ["Ps24_DestructorSafeContainer", "Index"]
+- !private ["Ps24_DestructorSafeContainer", "subscript"]
+- ["Ps21_ObjectiveCBridgeable", "Element"]
+- !private ["Ps21_ObjectiveCBridgeable", "Index"]
+- !private ["Ps21_ObjectiveCBridgeable", "subscript"]
+- ["Ps12_Reflectable", "Element"]
+- !private ["Ps12_Reflectable", "Index"]
+- !private ["Ps12_Reflectable", "subscript"]
+depends-nominal:
+- "Ps9AnyObject"
+- "Sa"
+- "Ps23ArrayLiteralConvertible"
+- "Ps11CVarArgType"
+- "Ps14CollectionType"
+- "Ps28CustomDebugStringConvertible"
+- "Ps23CustomStringConvertible"
+- "Ps9Equatable"
+- !private "Ps13GeneratorType"
+- "Ps8Hashable"
+- "Ps9Indexable"
+- !private "Vs17IndexingGenerator"
+- "PSo12MKAnnotation"
+- "Ps21MutableCollectionType"
+- "Ps16MutableIndexable"
+- "Ps16MutableSliceable"
+- "CSo8NSObject"
+- "PSo16NSObjectProtocol"
+- "C6notefy14NoteAnnotation"
+- "Ps30RangeReplaceableCollectionType"
+- "Ps12SequenceType"
+- !private "Vs5Slice"
+- !private "Vs12StaticString"
+- "Ps10_ArrayType"
+- "Ps24_DestructorSafeContainer"
+- "Ps21_ObjectiveCBridgeable"
+- "Ps12_Reflectable"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/Swift.swiftmodule"
+- "/Users/chad-mac/Desktop/git-sagigilid/notefy/notefy/notefy-Bridging-header.h"
+- "/Users/chad-mac/Desktop/git-sagigilid/notefy/notefy/GeoFire/API/GeoFire.h"
+- "/Users/chad-mac/Desktop/git-sagigilid/notefy/Pods/Firebase/Analytics/Sources/module.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/CoreLocation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/CoreImage.swiftmodule"
+- "/Users/chad-mac/Desktop/git-sagigilid/notefy/notefy/GeoFire/API/GFQuery.h"
+- "/Users/chad-mac/Desktop/git-sagigilid/notefy/notefy/GeoFire/API/GFCircleQuery.h"
+- "/Users/chad-mac/Desktop/git-sagigilid/notefy/notefy/GeoFire/API/GFRegionQuery.h"
+- "/Users/chad-mac/Desktop/git-sagigilid/notefy/Pods/FirebaseAnalytics/Frameworks/frameworks/FirebaseAnalytics.framework/Headers/FIROptions.h"
+- "/Users/chad-mac/Desktop/git-sagigilid/notefy/Pods/FirebaseAnalytics/Frameworks/frameworks/FirebaseAnalytics.framework/Headers/FIRConfiguration.h"
+- "/Users/chad-mac/Desktop/git-sagigilid/notefy/Pods/FirebaseAnalytics/Frameworks/frameworks/FirebaseAnalytics.framework/Headers/FIRApp.h"
+- "/Users/chad-mac/Desktop/git-sagigilid/notefy/Pods/FirebaseAnalytics/Frameworks/frameworks/FirebaseAnalytics.framework/Headers/FIRAnalyticsConfiguration.h"
+- "/Users/chad-mac/Desktop/git-sagigilid/notefy/Pods/FirebaseAnalytics/Frameworks/frameworks/FirebaseAnalytics.framework/Headers/FIRUserPropertyNames.h"
+- "/Users/chad-mac/Desktop/git-sagigilid/notefy/Pods/FirebaseAnalytics/Frameworks/frameworks/FirebaseAnalytics.framework/Headers/FIRParameterNames.h"
+- "/Users/chad-mac/Desktop/git-sagigilid/notefy/Pods/FirebaseAnalytics/Frameworks/frameworks/FirebaseAnalytics.framework/Headers/FIREventNames.h"
+- "/Users/chad-mac/Desktop/git-sagigilid/notefy/Pods/FirebaseAnalytics/Frameworks/frameworks/FirebaseAnalytics.framework/Headers/FIRAnalytics.h"
+- "/Users/chad-mac/Desktop/git-sagigilid/notefy/Pods/FirebaseAnalytics/Frameworks/frameworks/FirebaseAnalytics.framework/Headers/FIRAnalytics+AppDelegate.h"
+- "/Users/chad-mac/Desktop/git-sagigilid/notefy/Pods/FirebaseAnalytics/Frameworks/frameworks/FirebaseAnalytics.framework/Headers/FirebaseAnalytics.h"
+- "/Users/chad-mac/Desktop/git-sagigilid/notefy/Pods/FirebaseAnalytics/Frameworks/frameworks/FirebaseAnalytics.framework/Modules/module.modulemap"
+- "/Users/chad-mac/Desktop/git-sagigilid/notefy/Pods/FirebaseAuth/Frameworks/frameworks/FirebaseAuth.framework/Headers/FIRUserInfo.h"
+- "/Users/chad-mac/Desktop/git-sagigilid/notefy/Pods/FirebaseAuth/Frameworks/frameworks/FirebaseAuth.framework/Headers/FIRUser.h"
+- "/Users/chad-mac/Desktop/git-sagigilid/notefy/Pods/FirebaseAuth/Frameworks/frameworks/FirebaseAuth.framework/Headers/FIRAuthCredential.h"
+- "/Users/chad-mac/Desktop/git-sagigilid/notefy/Pods/FirebaseAuth/Frameworks/frameworks/FirebaseAuth.framework/Headers/FIRAuthErrors.h"
+- "/Users/chad-mac/Desktop/git-sagigilid/notefy/Pods/FirebaseAuth/Frameworks/frameworks/FirebaseAuth.framework/Headers/FIRAuth.h"
+- "/Users/chad-mac/Desktop/git-sagigilid/notefy/Pods/FirebaseAuth/Frameworks/frameworks/FirebaseAuth.framework/Headers/FIRTwitterAuthProvider.h"
+- "/Users/chad-mac/Desktop/git-sagigilid/notefy/Pods/FirebaseAuth/Frameworks/frameworks/FirebaseAuth.framework/Headers/FIRGoogleAuthProvider.h"
+- "/Users/chad-mac/Desktop/git-sagigilid/notefy/Pods/FirebaseAuth/Frameworks/frameworks/FirebaseAuth.framework/Headers/FIRGitHubAuthProvider.h"
+- "/Users/chad-mac/Desktop/git-sagigilid/notefy/Pods/FirebaseAuth/Frameworks/frameworks/FirebaseAuth.framework/Headers/FIRFacebookAuthProvider.h"
+- "/Users/chad-mac/Desktop/git-sagigilid/notefy/Pods/FirebaseAuth/Frameworks/frameworks/FirebaseAuth.framework/Headers/FIREmailPasswordAuthProvider.h"
+- "/Users/chad-mac/Desktop/git-sagigilid/notefy/Pods/FirebaseAuth/Frameworks/frameworks/FirebaseAuth.framework/Headers/FirebaseAuth.h"
+- "/Users/chad-mac/Desktop/git-sagigilid/notefy/Pods/FirebaseAuth/Frameworks/frameworks/FirebaseAuth.framework/Modules/module.modulemap"
+- "/Users/chad-mac/Desktop/git-sagigilid/notefy/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Headers/FIRServerValue.h"
+- "/Users/chad-mac/Desktop/git-sagigilid/notefy/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Headers/FIRTransactionResult.h"
+- "/Users/chad-mac/Desktop/git-sagigilid/notefy/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Headers/FIRMutableData.h"
+- "/Users/chad-mac/Desktop/git-sagigilid/notefy/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Headers/FIRDataSnapshot.h"
+- "/Users/chad-mac/Desktop/git-sagigilid/notefy/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Headers/FIRDataEventType.h"
+- "/Users/chad-mac/Desktop/git-sagigilid/notefy/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Headers/FIRDatabaseQuery.h"
+- "/Users/chad-mac/Desktop/git-sagigilid/notefy/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Headers/FIRDatabaseReference.h"
+- "/Users/chad-mac/Desktop/git-sagigilid/notefy/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Headers/FIRDatabase.h"
+- "/Users/chad-mac/Desktop/git-sagigilid/notefy/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Headers/FirebaseDatabase.h"
+- "/Users/chad-mac/Desktop/git-sagigilid/notefy/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Modules/module.modulemap"
+- "/Users/chad-mac/Desktop/git-sagigilid/notefy/Pods/FirebaseInstanceID/Frameworks/frameworks/FirebaseInstanceID.framework/Headers/FIRInstanceID.h"
+- "/Users/chad-mac/Desktop/git-sagigilid/notefy/Pods/FirebaseInstanceID/Frameworks/frameworks/FirebaseInstanceID.framework/Headers/FirebaseInstanceID.h"
+- "/Users/chad-mac/Desktop/git-sagigilid/notefy/Pods/FirebaseInstanceID/Frameworks/frameworks/FirebaseInstanceID.framework/Modules/module.modulemap"
+- "/Users/chad-mac/Desktop/git-sagigilid/notefy/Pods/FirebaseStorage/Frameworks/FirebaseStorage.framework/Headers/FIRStorageTaskSnapshot.h"
+- "/Users/chad-mac/Desktop/git-sagigilid/notefy/Pods/FirebaseStorage/Frameworks/FirebaseStorage.framework/Headers/FIRStorageUploadTask.h"
+- "/Users/chad-mac/Desktop/git-sagigilid/notefy/Pods/FirebaseStorage/Frameworks/FirebaseStorage.framework/Headers/FIRStorageReference.h"
+- "/Users/chad-mac/Desktop/git-sagigilid/notefy/Pods/FirebaseStorage/Frameworks/FirebaseStorage.framework/Headers/FIRStorageMetadata.h"
+- "/Users/chad-mac/Desktop/git-sagigilid/notefy/Pods/FirebaseStorage/Frameworks/FirebaseStorage.framework/Headers/FIRStorageTask.h"
+- "/Users/chad-mac/Desktop/git-sagigilid/notefy/Pods/FirebaseStorage/Frameworks/FirebaseStorage.framework/Headers/FIRStorageObservableTask.h"
+- "/Users/chad-mac/Desktop/git-sagigilid/notefy/Pods/FirebaseStorage/Frameworks/FirebaseStorage.framework/Headers/FIRStorageDownloadTask.h"
+- "/Users/chad-mac/Desktop/git-sagigilid/notefy/Pods/FirebaseStorage/Frameworks/FirebaseStorage.framework/Headers/FIRStorageConstants.h"
+- "/Users/chad-mac/Desktop/git-sagigilid/notefy/Pods/FirebaseStorage/Frameworks/FirebaseStorage.framework/Headers/FIRStorage.h"
+- "/Users/chad-mac/Desktop/git-sagigilid/notefy/Pods/FirebaseStorage/Frameworks/FirebaseStorage.framework/Headers/FirebaseStorage.h"
+- "/Users/chad-mac/Desktop/git-sagigilid/notefy/Pods/FirebaseStorage/Frameworks/FirebaseStorage.framework/Modules/module.modulemap"
+- "/Users/chad-mac/Desktop/git-sagigilid/notefy/Pods/Firebase/Analytics/Sources/Firebase.h"
+interface-hash: "cd544f0c1ade64e07af0fe838bbe7e4a"

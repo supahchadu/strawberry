@@ -25,17 +25,21 @@ class SignInVC: UIViewController, UITextFieldDelegate {
         
         emailField.delegate = self
         passField.delegate = self
-        emailField.becomeFirstResponder()
+  
         
-        
-        
+    }
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        emailField.resignFirstResponder()
+        passField.resignFirstResponder()
+        return true
     }
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         if let _ = KeychainWrapper.stringForKey(KEY_UID) {
             // Send the user to the Note Feed View
-            performSegueWithIdentifier("goToNoteFeed", sender: nil)
+            performSegueWithIdentifier("goToMapFeed", sender: nil)
         }
     }
     
@@ -97,16 +101,11 @@ class SignInVC: UIViewController, UITextFieldDelegate {
                         self.completeSignIn(user.uid, userData: userData)
                     }
                     
-                    let alert = UIAlertController(title: "Notefy", message: "Your account has been successfully created!", preferredStyle: UIAlertControllerStyle.Alert)
-                    alert.addAction(UIAlertAction(title: "Back", style: UIAlertActionStyle.Default, handler: nil))
-                    self.presentViewController(alert, animated: true, completion: nil)
-                    
+                    messageToast("Congrats! Your account has been created!", view: self.view)
                 } else {
                     FIRAuth.auth()?.createUserWithEmail(email, password: pwd, completion: {(user,error) in
                         if error != nil {
-                            let alert = UIAlertController(title: "Hold Up!", message: "Your Password or Username might be incorrect.", preferredStyle: UIAlertControllerStyle.Alert)
-                            alert.addAction(UIAlertAction(title: "Back", style: UIAlertActionStyle.Default, handler: nil))
-                            self.presentViewController(alert, animated: true, completion: nil)
+                            messageToast("Incorrect Username or Password.", view: self.view)
                             print("Unable to Authenticate with Firebase using \(email)")
                         }else {
                             print("Successfully authenticate with Firebase")
@@ -128,7 +127,7 @@ class SignInVC: UIViewController, UITextFieldDelegate {
         DatabaseService.databaseService.createFirebaseDBUser(id, userData: userData)
         let keychainResult = KeychainWrapper.setString(id, forKey: KEY_UID)
         print("Login Data saved to keychain \(keychainResult)")
-        performSegueWithIdentifier("goToNoteFeed", sender: nil)
+        performSegueWithIdentifier("goToMapFeed", sender: nil)
     }
     
     // ---- VIEW Helper -----

@@ -59,23 +59,24 @@ class NoteCell: UITableViewCell {
         
         likesRef.observeSingleEventOfType(.Value, withBlock: { snapshot in
             if snapshot.value is NSNull {
-                self.noteLikeImage.image = UIImage(named: "1")
-            } else {
                 self.noteLikeImage.image = UIImage(named: "2")
+            } else {
+                self.noteLikeImage.image = UIImage(named: "1")
             }
         
         })
     }
     
+    
     func likeTapped(sender: UITapGestureRecognizer) {
        
         likesRef.observeSingleEventOfType(.Value, withBlock: { (snapshot) in
             if snapshot.value is NSNull {
-                self.noteLikeImage.image = UIImage(named: "1")
+                self.noteLikeImage.image = UIImage(named: "2")
                 self.note.adjustLikes(true)
                 self.likesRef.setValue(true)
             } else {
-                self.noteLikeImage.image = UIImage(named: "2")
+                self.noteLikeImage.image = UIImage(named: "1")
                 self.note.adjustLikes(false)
                 self.likesRef.removeValue()
             }

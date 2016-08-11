@@ -17,11 +17,13 @@ class NoteAnnotation : NSObject, MKAnnotation {
     var noteNumber: Int
     var noteType: String
     var title: String?
+    var noteKey: String
     
-    init(coordinate: CLLocationCoordinate2D, noteNumber: Int){
+    init(coordinate: CLLocationCoordinate2D, noteNumber: Int, noteKey: String){
         self.coordinate = coordinate
         self.noteNumber = noteNumber
-        self.noteType = typeNotes[noteNumber-1]
+        self.noteType = typeNotes[0]
         self.title = self.noteType
+        self.noteKey = noteKey
     }
 }
