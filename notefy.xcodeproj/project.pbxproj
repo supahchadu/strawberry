@@ -512,8 +512,8 @@
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.sagigilid.notefy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				SKIP_INSTALL = YES;
+				PROVISIONING_PROFILE = "a1df37d6-a54a-4ebf-97ec-7888443d9468";
+				SKIP_INSTALL = NO;
 				SWIFT_OBJC_BRIDGING_HEADER = "notefy/notefy-Bridging-header.h";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -534,8 +534,8 @@
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.sagigilid.notefy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				SKIP_INSTALL = YES;
+				PROVISIONING_PROFILE = "a1df37d6-a54a-4ebf-97ec-7888443d9468";
+				SKIP_INSTALL = NO;
 				SWIFT_OBJC_BRIDGING_HEADER = "notefy/notefy-Bridging-header.h";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
